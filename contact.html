@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PRO SERVICE INTERNATIONAL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo-psi.jpg" alt="PSI Logo" class="navbar-logo">
+                <span class="brand-text">PSI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./emploi.html">Recrutements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-nav" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-banner2" style="height: 20px;">
+        <h2 class="section-title-c">Contactez-nous</h2>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-c-section">
+        <div class="container">
+
+            <div class="row">
+                <!-- Colonne gauche - Image Placeholder -->
+
+                <div class="col-lg-6">
+                    <img class="col-12" src="./assets/images/contact-img.jpg" alt="">
+                </div>
+
+                <!-- Colonne droite - Formulaire -->
+                <div class="col-lg-6">
+                    <form class="contact-c-form" id="contact-cForm">
+                        <div class="form-group fg-c ">
+                            <label for="fullName" class="form-label">Nom complet <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group fg-c">
+                            <label for="email" class="form-label">Email <span class="required">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group fg-c">
+                            <label for="phone" class="form-label">Téléphone <span class="required">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group fg-c">
+                            <label for="service" class="form-label">Service concerné</label>
+                            <select class="form-select" id="service" name="service">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="importation">Importation</option>
+                                <option value="location">Location</option>
+                                <option value="recrutement">Recrutement</option>
+                                <option value="formation">Formation</option>
+                                <option value="btp">BTP</option>
+                                <option value="maintenance">Maintenance</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group fg-c">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Décrivez votre demande..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-contact-c">
+                            <i class="fas fa-paper-plane me-2"></i>Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Informations de Contact -->
+            <div class="row mt-5 mb-5">
+                <div class="col-12">
+                    <div class="contact-info">
+                        <h4><i class="fas fa-info-circle me-2"></i>Nos Coordonnées</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <strong>Adresse :</strong><br> 123 Avenue de l'Indépendance, Cotonou
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <strong>Téléphone :</strong><br> +229 XX XX XX XX
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <strong>Email :</strong><br> contact@proservice-international.com
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Horaires :</strong><br> Lun-Ven 8h-18h, Sam 8h-13h
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>PRO SERVICE INTERNATIONAL</h5>
+                    <p>Votre partenaire de confiance pour les services RH & BTP en Afrique. Excellence, Innovation, Partenariat.</p>
+                    <div class="social-links-footer">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">BTP</a></li>
+                        <li><a href="#">Importation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Formations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">BTP & Construction</a></li>
+                        <li><a href="#">Industrie</a></li>
+                        <li><a href="#">Transport</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Cotonou, Bénin</p>
+                    <p><i class="fas fa-phone me-2"></i>+229 XX XX XX XX</p>
+                    <p><i class="fas fa-envelope me-2"></i>contact@psibenin.com</p>
+                </div>
+            </div>
+            <hr style="border-color: #ffffff33;">
+            <div class="text-center">
+                <p>&copy; 2024 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/22912345678" class="whatsapp-btn" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/mail.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secteurs qui Recrutent : Analyse du marché de l'emploi au Bénin 2025</title>
+    <meta name="description" content="Découvrez les secteurs porteurs d'emploi au Bénin en 2025 : agriculture, numérique, BTP, commerce. Analyse complète des opportunités professionnelles.">
+    <meta name="keywords" content="emploi Bénin, secteurs porteurs, opportunités, recrutement, agriculture, numérique, BTP, 2025">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+         :root {
+            --primary-color: #2C5F2D;
+            --secondary-color: #97BC62;
+            --accent-color: #FFB347;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-light: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.1" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sector-card {
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            margin-bottom: 30px;
+        }
+        
+        .sector-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 1rem 0 1rem 3rem;
+            border-left: 3px solid var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 1.5rem;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .opportunity-badge {
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .video-embed {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+        
+        .download-section {
+            background: var(--bg-light);
+            padding: 3rem 0;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+            .chart-container {
+                height: 300px;
+            }
+            .stats-number {
+                font-size: 2rem;
+            }
+        }
+        
+        .nav-pills .nav-link {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            margin: 0 5px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-pills .nav-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .nav-pills .nav-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Secteurs qui Recrutent au Bénin</h1>
+                    <p class="lead mb-4">Analyse approfondie du marché de l'emploi béninois en 2025 : découvrez les secteurs porteurs et les opportunités à saisir pour réussir votre insertion professionnelle.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#secteurs" class="btn btn-light btn-lg">Découvrir les secteurs</a>
+                        <a href="#opportunites" class="btn btn-outline-light btn-lg">Voir les opportunités</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fas fa-chart-line" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Pills -->
+    <div class="container mt-4">
+        <ul class="nav nav-pills justify-content-center flex-wrap" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#contexte">Contexte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#secteurs">Secteurs Porteurs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#competences">Compétences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#opportunites">Opportunités</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card stats-card">
+                        <span class="stats-number">29</span>
+                        <span>Milliards FCFA investis dans le numérique</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stats-card">
+                        <span class="stats-number">70%</span>
+                        <span>Emplois dans l'agriculture</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stats-card">
+                        <span class="stats-number">45%</span>
+                        <span>Emplois dans le tertiaire</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stats-card">
+                        <span class="stats-number">77</span>
+                        <span>Offres disponibles actuellement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte et Politiques -->
+    <section id="contexte" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contexte et Politiques Publiques</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead">La politique nationale de l'emploi du Bénin (2019-2025) vise à transformer fondamentalement le marché du travail béninois en s'attaquant aux défis structurels du chômage et du sous-emploi.</p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>2019 - Lancement de la politique</h5>
+                            <p>Adoption de la stratégie nationale avec pour objectif de réduire de moitié le taux de chômage et de sous-emploi.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2020-2023 - Mise en œuvre</h5>
+                            <p>Développement de programmes d'insertion professionnelle et renforcement de l'enseignement technique.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2025 - Accélération</h5>
+                            <p>Investissement massif de 29 milliards FCFA dans le secteur numérique et digitalisation de l'économie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-target sector-icon"></i>
+                            <h5>Objectifs 2025</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success"></i> Amélioration de l'employabilité</li>
+                                <li><i class="fas fa-check text-success"></i> Réduction du chômage</li>
+                                <li><i class="fas fa-check text-success"></i> Promotion de l'entrepreneuriat</li>
+                                <li><i class="fas fa-check text-success"></i> Renforcement de l'enseignement technique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteurs Porteurs -->
+    <section id="secteurs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Analyse des Secteurs Porteurs</h2>
+
+            <!-- Chart Section -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="sectorsChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secteurs Cards -->
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card sector-card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fas fa-seedling sector-icon"></i>
+                                <h4>Agriculture et Agroalimentaire</h4>
+                            </div>
+                            <p>Premier secteur employeur du Bénin, l'agriculture représente près de 70% des emplois. Les opportunités se concentrent sur :</p>
+                            <div class="mb-3">
+                                <span class="opportunity-badge">Production agricole</span>
+                                <span class="opportunity-badge">Transformation</span>
+                                <span class="opportunity-badge">Exportation</span>
+                                <span class="opportunity-badge">Agro-tech</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://www.emploibenin.com/emploi-agriculture" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Voir les offres
+                                </a>
+                                <a href="https://www.gouv.bj/opportunite/121/recrutement-multipostes-compte-fonds-national-developpement-agricole-fnda-/" class="btn btn-outline-primary" target="_blank">
+                                    FNDA Recrutement
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card sector-card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fas fa-laptop-code sector-icon"></i>
+                                <h4>Numérique et Médias</h4>
+                            </div>
+                            <p>Secteur en pleine expansion avec un budget de 29 milliards FCFA en 2025 pour la digitalisation de l'économie béninoise.</p>
+                            <div class="mb-3">
+                                <span class="opportunity-badge">Développement web</span>
+                                <span class="opportunity-badge">Data science</span>
+                                <span class="opportunity-badge">Cybersécurité</span>
+                                <span class="opportunity-badge">Médias digitaux</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://www.emploibenin.com/" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-search"></i> Rechercher
+                                </a>
+                                <span class="badge bg-success">+200% croissance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card sector-card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fas fa-hard-hat sector-icon"></i>
+                                <h4>BTP et Construction</h4>
+                            </div>
+                            <p>Forte demande en main-d'œuvre qualifiée, notamment avec les grands projets d'infrastructure comme le pipeline Niger-Bénin.</p>
+                            <div class="mb-3">
+                                <span class="opportunity-badge">Génie civil</span>
+                                <span class="opportunity-badge">Architecture</span>
+                                <span class="opportunity-badge">Conduite d'engins</span>
+                                <span class="opportunity-badge">Supervision</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://www.emploibenin.com/emploi-btp-construction" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Offres BTP
+                                </a>
+                                <a href="https://emploi-pipeline.gouv.bj/recrutement/" class="btn btn-outline-primary" target="_blank">
+                                    Pipeline PENB
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card sector-card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fas fa-store sector-icon"></i>
+                                <h4>Commerce et Services</h4>
+                            </div>
+                            <p>Le secteur tertiaire représente 45% des emplois urbains, avec une croissance continue dans le commerce moderne et les services.</p>
+                            <div class="mb-3">
+                                <span class="opportunity-badge">Vente</span>
+                                <span class="opportunity-badge">Marketing</span>
+                                <span class="opportunity-badge">Logistique</span>
+                                <span class="opportunity-badge">Tourisme</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="https://www.emploibenin.com/" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-shopping-cart"></i> Explorer
+                                </a>
+                                <span class="badge bg-info">45% des emplois urbains</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Recherchées -->
+    <section id="competences" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Compétences Recherchées et Stratégies</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Top 10 des Compétences Demandées</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-code text-primary"></i> Programmation</span>
+                                            <span class="badge bg-primary">95%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-tractor text-success"></i> Agriculture moderne</span>
+                                            <span class="badge bg-success">88%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-tools text-warning"></i> Compétences techniques BTP</span>
+                                            <span class="badge bg-warning">82%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-chart-bar text-info"></i> Analyse de données</span>
+                                            <span class="badge bg-info">75%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-handshake text-secondary"></i> Vente et négociation</span>
+                                            <span class="badge bg-secondary">70%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-language text-danger"></i> Langues étrangères</span>
+                                            <span class="badge bg-danger">68%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-users text-dark"></i> Management</span>
+                                            <span class="badge bg-dark">65%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-shield-alt text-primary"></i> Cybersécurité</span>
+                                            <span class="badge bg-primary">62%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-camera text-success"></i> Création de contenu</span>
+                                            <span class="badge bg-success">58%</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span><i class="fas fa-calculator text-warning"></i> Comptabilité</span>
+                                            <span class="badge bg-warning">55%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5><i class="fas fa-lightbulb"></i> Conseils Stratégiques</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check"></i> Adaptez votre formation aux secteurs porteurs</li>
+                                <li class="mb-2"><i class="fas fa-check"></i> Développez vos compétences numériques</li>
+                                <li class="mb-2"><i class="fas fa-check"></i> Maîtrisez l'anglais et le français</li>
+                                <li class="mb-2"><i class="fas fa-check"></i> Créez un CV optimisé pour chaque secteur</li>
+                                <li class="mb-2"><i class="fas fa-check"></i> Rejoignez les réseaux professionnels</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vidéo Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Témoignages et Analyses</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Analyse du marché de l'emploi au Bénin" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-3">L'emploi des jeunes au Bénin : Défis et opportunités</h5>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="video-embed">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Secteurs porteurs Bénin" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-3">Innovation agricole et création d'emplois</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunités et Redirection -->
+    <section id="opportunites" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Opportunités Concrètes à Saisir</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-briefcase sector-icon text-primary"></i>
+                            <h5>Emplois Immédiats</h5>
+                            <p>Plus de 77 offres d'emploi disponibles actuellement sur les plateformes de recrutement.</p>
+                            <a href="https://www.emploibenin.com/" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Voir toutes les offres
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-graduation-cap sector-icon text-success"></i>
+                            <h5>Formations Qualifiantes</h5>
+                            <p>Programmes d'insertion pour les jeunes (PSIE) et formations techniques adaptées au marché.</p>
+                            <a href="https://www.gouv.bj/opportunites/offres-emploi/" class="btn btn-success" target="_blank">
+                                <i class="fas fa-book"></i> Découvrir les formations
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-rocket sector-icon text-warning"></i>
+                            <h5>Entrepreneuriat</h5>
+                            <p>Accompagnement et financement pour créer votre entreprise dans les secteurs porteurs.</p>
+                            <a href="https://investbenin.bj/" class="btn btn-warning" target="_blank">
+                                <i class="fas fa-lightbulb"></i> Lancer son projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container text-center">
+            <h3>Téléchargez Notre Guide Complet</h3>
+            <p class="lead">Obtenez une synthèse PDF de cette analyse avec des conseils personnalisés pour votre recherche d'emploi.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <button class="btn btn-primary btn-lg me-3" onclick="generatePDF()">
+                        <i class="fas fa-download"></i> Guide PDF
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg" onclick="generateInfographic()">
+                        <i class="fas fa-chart-pie"></i> Infographie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>Analyse Emploi Bénin 2025</h5>
+                    <p>Votre guide complet pour naviguer sur le marché de l'emploi béninois et saisir les meilleures opportunités professionnelles.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.emploibenin.com/" class="text-light">EmploiBenin.com</a></li>
+                        <li><a href="https://www.gouv.bj/opportunites/offres-emploi/" class="text-light">Offres gouvernementales</a></li>
+                        <li><a href="https://investbenin.bj/" class="text-light">Invest in Benin</a></li>
+                        <li><a href="https://www.anpe.bj/" class="text-light">ANPE Bénin</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact & Réseaux</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
+                    <p class="mt-3">
+                        <i class="fas fa-envelope"></i> contact@emploibenin-analyse.com<br>
+                        <i class="fas fa-phone"></i> +229 XX XX XX XX
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Analyse Emploi Bénin. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Dernière mise à jour : Juin 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Chart configurations
+        const ctx1 = document.getElementById('sectorsChart').getContext('2d');
+        const sectorsChart = new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Agriculture', 'Commerce & Services', 'BTP & Construction', 'Numérique & Médias', 'Autres'],
+                datasets: [{
+                    data: [70, 18, 7, 3, 2],
+                    backgroundColor: [
+                        '#2C5F2D',
+                        '#97BC62',
+                        '#FFB347',
+                        '#3498DB',
+                        '#95A5A6'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des Emplois par Secteur (%)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Numérique', 'BTP', 'Agroalimentaire', 'Services', 'Commerce'],
+                datasets: [{
+                    label: 'Taux de croissance 2024-2025 (%)',
+                    data: [200, 85, 45, 35, 25],
+                    backgroundColor: [
+                        '#3498DB',
+                        '#FFB347',
+                        '#2C5F2D',
+                        '#97BC62',
+                        '#95A5A6'
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Croissance des Secteurs d\'Emploi',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-pills .nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // PDF Generation function
+        function generatePDF() {
+            // Create a simple PDF content
+            const pdfContent = `
+                GUIDE EMPLOI BÉNIN 2025
+                ========================
+                
+                SECTEURS PORTEURS :
+                • Agriculture et Agroalimentaire (70% des emplois)
+                • Numérique et Médias (+200% de croissance)
+                • BTP et Construction (forte demande)
+                • Commerce et Services (45% emplois urbains)
+                
+                COMPÉTENCES RECHERCHÉES :
+                • Programmation et compétences numériques
+                • Agriculture moderne et agro-tech
+                • Compétences techniques BTP
+                • Analyse de données
+                • Vente et négociation
+                
+                OPPORTUNITÉS IMMÉDIATES :
+                • 77 offres d'emploi disponibles
+                • Programmes d'insertion PSIE
+                • Investissement de 29 milliards FCFA dans le numérique
+                
+                LIENS UTILES :
+                • www.emploibenin.com
+                • www.gouv.bj/opportunites/offres-emploi/
+                • investbenin.bj
+            `;
+
+            const blob = new Blob([pdfContent], {
+                type: 'text/plain'
+            });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Guide-Emploi-Benin-2025.txt';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+
+            alert('Guide téléchargé ! Pour une version PDF complète, contactez-nous.');
+        }
+
+        // Infographic generation function
+        function generateInfographic() {
+            // Create a simple infographic data
+            const canvas = document.createElement('canvas');
+            canvas.width = 800;
+            canvas.height = 1200;
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = '#f8f9fa';
+            ctx.fillRect(0, 0, 800, 1200);
+
+            // Title
+            ctx.fillStyle = '#2C5F2D';
+            ctx.font = 'bold 32px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('EMPLOI BÉNIN 2025', 400, 60);
+
+            // Sectors
+            ctx.font = 'bold 24px Arial';
+            ctx.fillText('SECTEURS PORTEURS', 400, 120);
+
+            const sectors = [{
+                name: 'Agriculture',
+                percent: '70%',
+                color: '#2C5F2D'
+            }, {
+                name: 'Commerce & Services',
+                percent: '18%',
+                color: '#97BC62'
+            }, {
+                name: 'BTP & Construction',
+                percent: '7%',
+                color: '#FFB347'
+            }, {
+                name: 'Numérique',
+                percent: '3%',
+                color: '#3498DB'
+            }];
+
+            sectors.forEach((sector, index) => {
+                const y = 180 + (index * 80);
+                ctx.fillStyle = sector.color;
+                ctx.fillRect(100, y, parseInt(sector.percent) * 5, 40);
+                ctx.fillStyle = '#2C3E50';
+                ctx.font = '18px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`${sector.name}: ${sector.percent}`, 120, y + 25);
+            });
+
+            // Stats
+            ctx.fillStyle = '#2C5F2D';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('CHIFFRES CLÉS', 400, 580);
+
+            const stats = [
+                '29 Milliards FCFA investis dans le numérique',
+                '77 offres d\'emploi disponibles',
+                '+200% croissance secteur numérique',
+                '45% emplois urbains dans les services'
+            ];
+
+            stats.forEach((stat, index) => {
+                ctx.fillStyle = '#2C3E50';
+                ctx.font = '16px Arial';
+                ctx.fillText(stat, 400, 620 + (index * 30));
+            });
+
+            // Convert to download
+            canvas.toBlob(function(blob) {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Infographie-Emploi-Benin-2025.png';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            });
+
+            alert('Infographie générée et téléchargée !');
+        }
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add click tracking for external links
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Redirection vers:', this.href);
+                // Ici vous pourriez ajouter un système d'analytics
+            });
+        });
+
+        // Search functionality for job opportunities
+        function searchJobs(sector) {
+            const baseUrl = 'https://www.emploibenin.com/';
+            const searchParams = new URLSearchParams({
+                q: sector,
+                location: 'benin'
+            });
+
+            window.open(baseUrl + '?' + searchParams.toString(), '_blank');
+        }
+
+        // Add search buttons functionality
+        document.querySelectorAll('.opportunity-badge').forEach(badge => {
+            badge.style.cursor = 'pointer';
+            badge.addEventListener('click', function() {
+                searchJobs(this.textContent.trim());
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidature - PRO SERVICE INTERNATIONAL</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo-psi.jpg" alt="PSI Logo" class="navbar-logo">
+                <span class="brand-text">PSI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-nav" href="./emploi.html">Recrutements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-banner2 recrutement-banner">
+        <div class="container">
+            <div class="hero-content2">
+                <div class="col-lg-12">
+                    <h1 class="display-4 fw-bold mb-3">Postuler à une offre d'emploi</h1>
+                    <p class="lead">Rejoignez l'équipe PRO SERVICE INTERNATIONAL</p>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="emploi.html">Recrutement</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Postuler</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container my-5">
+        <!-- Informations sur l'offre -->
+        <div class="job-info-card">
+            <h3 class="mb-4"><i class="fas fa-briefcase me-2"></i>Détails de l'offre</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="job-info-item">
+                        <i class="fas fa-hashtag"></i>
+                        <div><strong>Référence:</strong> REF-2024-001</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div><strong>Poste:</strong> Conducteur d'Engins</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-industry"></i>
+                        <div><strong>Secteur:</strong> BTP - Travaux Publics</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="job-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><strong>Localisation:</strong> Cotonou, Bénin</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-file-contract"></i>
+                        <div><strong>Type de contrat:</strong> CDI</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div><strong>Date limite:</strong> 15 Juillet 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="candidatureForm">
+            <!-- Section A: Informations personnelles -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-user"></i> Informations personnelles
+                </h3>
+
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Civilité <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" name="civilite" id="m" value="M." required>
+                                <label for="m">M.</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="civilite" id="mme" value="Mme">
+                                <label for="mme">Mme</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="civilite" id="mlle" value="Mlle">
+                                <label for="mlle">Mlle</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nom <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="nom" required>
+                        <div class="error-message">Ce champ est obligatoire</div>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label">Prénom <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="prenom" required>
+                        <div class="error-message">Ce champ est obligatoire</div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Date de naissance</label>
+                        <input type="date" class="form-control" name="dateNaissance">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Nationalité</label>
+                        <select class="form-select" name="nationalite">
+                            <option value="">Sélectionnez...</option>
+                            <option value="Béninoise">Béninoise</option>
+                            <option value="Togolaise">Togolaise</option>
+                            <option value="Nigériane">Nigériane</option>
+                            <option value="Burkinabè">Burkinabè</option>
+                            <option value="Ivoirienne">Ivoirienne</option>
+                            <option value="Française">Française</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Situation matrimoniale</label>
+                        <select class="form-select" name="situationMatrimoniale">
+                            <option value="">Sélectionnez...</option>
+                            <option value="Célibataire">Célibataire</option>
+                            <option value="Marié(e)">Marié(e)</option>
+                            <option value="Divorcé(e)">Divorcé(e)</option>
+                            <option value="Veuf/Veuve">Veuf/Veuve</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Email <span class="required">*</span></label>
+                        <input type="email" class="form-control" name="email" required>
+                        <div class="error-message">Veuillez saisir un email valide</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Téléphone principal <span class="required">*</span></label>
+                        <input type="tel" class="form-control" name="telephone1" value="+229 " required>
+                        <div class="error-message">Ce champ est obligatoire</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Téléphone secondaire</label>
+                        <input type="tel" class="form-control" name="telephone2" value="+229 ">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <label class="form-label">Adresse complète <span class="required">*</span></label>
+                        <textarea class="form-control" name="adresse" rows="2" required></textarea>
+                        <div class="error-message">Ce champ est obligatoire</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Ville de résidence <span class="required">*</span></label>
+                        <select class="form-select" name="ville" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Cotonou">Cotonou</option>
+                            <option value="Porto-Novo">Porto-Novo</option>
+                            <option value="Parakou">Parakou</option>
+                            <option value="Abomey-Calavi">Abomey-Calavi</option>
+                            <option value="Djougou">Djougou</option>
+                            <option value="Bohicon">Bohicon</option>
+                            <option value="Kandi">Kandi</option>
+                            <option value="Ouidah">Ouidah</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        <div class="error-message">Ce champ est obligatoire</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section B: Informations professionnelles -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-graduation-cap"></i> Informations professionnelles
+                </h3>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Niveau d'études</label>
+                        <select class="form-select" name="niveauEtudes">
+                            <option value="">Sélectionnez...</option>
+                            <option value="Primaire">Primaire</option>
+                            <option value="Secondaire">Secondaire</option>
+                            <option value="Bac">Bac</option>
+                            <option value="Bac+2">Bac+2</option>
+                            <option value="Bac+3">Bac+3</option>
+                            <option value="Bac+5">Bac+5</option>
+                            <option value="Doctorat">Doctorat</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Domaine d'études</label>
+                        <input type="text" class="form-control" name="domaineEtudes">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Institution/École</label>
+                        <input type="text" class="form-control" name="institution">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Années d'expérience</label>
+                        <select class="form-select" name="experience">
+                            <option value="">Sélectionnez...</option>
+                            <option value="0-1 an">0-1 an</option>
+                            <option value="1-3 ans">1-3 ans</option>
+                            <option value="3-5 ans">3-5 ans</option>
+                            <option value="5-10 ans">5-10 ans</option>
+                            <option value="+10 ans">+10 ans</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Poste actuel/dernier poste</label>
+                        <input type="text" class="form-control" name="posteActuel">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Entreprise actuelle/dernière</label>
+                        <input type="text" class="form-control" name="entrepriseActuelle">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Secteurs d'activité d'expérience</label>
+                        <select class="form-select" name="secteursExp" multiple>
+                            <option value="BTP">BTP</option>
+                            <option value="Industrie">Industrie</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Banque">Banque</option>
+                            <option value="Santé">Santé</option>
+                            <option value="Éducation">Éducation</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Télécommunications">Télécommunications</option>
+                        </select>
+                        <small class="text-muted">Maintenez Ctrl pour sélectionner plusieurs secteurs</small>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Compétences principales</label>
+                        <textarea class="form-control" name="competences" rows="3" placeholder="Décrivez vos principales compétences..."></textarea>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Langues parlées et niveaux</label>
+                    <div id="languesContainer">
+                        <div class="language-level">
+                            <select class="form-select" name="langue1">
+                                <option value="">Sélectionnez une langue...</option>
+                                <option value="Français">Français</option>
+                                <option value="Anglais">Anglais</option>
+                                <option value="Fon">Fon</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Dendi">Dendi</option>
+                                <option value="Bariba">Bariba</option>
+                                <option value="Espagnol">Espagnol</option>
+                                <option value="Allemand">Allemand</option>
+                            </select>
+                            <select class="form-select level-select" name="niveau1">
+                                <option value="">Niveau</option>
+                                <option value="Débutant">Débutant</option>
+                                <option value="Intermédiaire">Intermédiaire</option>
+                                <option value="Avancé">Avancé</option>
+                                <option value="Natif">Natif</option>
+                            </select>
+                        </div>
+                        <div class="language-level">
+                            <select class="form-select" name="langue2">
+                                <option value="">Sélectionnez une langue...</option>
+                                <option value="Français">Français</option>
+                                <option value="Anglais">Anglais</option>
+                                <option value="Fon">Fon</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Dendi">Dendi</option>
+                                <option value="Bariba">Bariba</option>
+                                <option value="Espagnol">Espagnol</option>
+                                <option value="Allemand">Allemand</option>
+                            </select>
+                            <select class="form-select level-select" name="niveau2">
+                                <option value="">Niveau</option>
+                                <option value="Débutant">Débutant</option>
+                                <option value="Intermédiaire">Intermédiaire</option>
+                                <option value="Avancé">Avancé</option>
+                                <option value="Natif">Natif</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section C: Motivations et disponibilité -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-heart"></i> Motivations et disponibilité
+                </h3>
+
+                <div class="mb-3">
+                    <label class="form-label">Pourquoi postulez-vous à ce poste ? <span class="required">*</span></label>
+                    <textarea class="form-control" name="motivation" rows="4" required minlength="100" placeholder="Expliquez en au moins 100 caractères pourquoi ce poste vous intéresse..."></textarea>
+                    <div class="error-message">Ce champ est obligatoire (minimum 100 caractères)</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Vos principales motivations</label>
+                    <textarea class="form-control" name="motivationsPrincipales" rows="3" placeholder="Décrivez ce qui vous motive dans votre carrière..."></textarea>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Disponibilité</label>
+                        <select class="form-select" name="disponibilite">
+                            <option value="">Sélectionnez...</option>
+                            <option value="Immédiate">Immédiate</option>
+                            <option value="1 mois">1 mois</option>
+                            <option value="2 mois">2 mois</option>
+                            <option value="À négocier">À négocier</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Prétentions salariales</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="salaire" placeholder="Montant">
+                            <select class="form-select" name="devise" style="max-width: 100px;">
+                                <option value="FCFA">FCFA</option>
+                                <option value="EUR">EUR</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Acceptez-vous les déplacements ?</label>
+                        <select class="form-select" name="deplacements">
+                            <option value="">Sélectionnez...</option>
+                            <option value="Oui">Oui</option>
+                            <option value="Non">Non</option>
+                            <option value="Occasionnellement">Occasionnellement</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Moyen de transport</label>
+                    <select class="form-select" name="transport">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Véhicule personnel">Véhicule personnel</option>
+                        <option value="Transport en commun">Transport en commun</option>
+                        <option value="Moto">Moto</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section Upload de documents -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-upload"></i> Documents à joindre
+                </h3>
+
+                <h5 class="text-primary mb-3">Documents obligatoires <span class="required">*</span></h5>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label class="form-label">CV (PDF uniquement) <span class="required">*</span></label>
+                        <div class="upload-zone" id="cvUpload">
+                            <i class="fas fa-file-pdf upload-icon"></i>
+                            <h5>Glissez votre CV ici</h5>
+                            <p class="text-muted">ou cliquez pour sélectionner<br>
+                                <small>PDF uniquement - Max 5MB</small></p>
+                            <input type="file" id="cvFile" accept=".pdf" style="display: none;" required>
+                        </div>
+                        <div id="cvPreview" class="file-preview" style="display: none;">
+                            <div class="file-info">
+                                <i class="fas fa-file-pdf text-danger me-2"></i>
+                                <span id="cvFileName"></span>
+                                <small class="text-muted d-block" id="cvFileSize"></small>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeFile('cv')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="error-message">Le CV est obligatoire</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Lettre de motivation (PDF uniquement) <span class="required">*</span></label>
+                        <div class="upload-zone" id="lettreUpload">
+                            <i class="fas fa-file-alt upload-icon"></i>
+                            <h5>Glissez votre lettre ici</h5>
+                            <p class="text-muted">ou cliquez pour sélectionner<br>
+                                <small>PDF uniquement - Max 3MB</small></p>
+                            <input type="file" id="lettreFile" accept=".pdf" style="display: none;" required>
+                        </div>
+                        <div id="lettrePreview" class="file-preview" style="display: none;">
+                            <div class="file-info">
+                                <i class="fas fa-file-alt text-primary me-2"></i>
+                                <span id="lettreFileName"></span>
+                                <small class="text-muted d-block" id="lettreFileSize"></small>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeFile('lettre')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="error-message">La lettre de motivation est obligatoire</div>
+                    </div>
+                </div>
+
+                <h5 class="text-secondary mb-3">Documents optionnels</h5>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Diplômes/Certificats (PDF, max 3 fichiers)</label>
+                        <div class="upload-zone" id="diplomesUpload">
+                            <i class="fas fa-certificate upload-icon"></i>
+                            <h6>Diplômes et certificats</h6>
+                            <p class="text-muted"><small>PDF uniquement - Max 5MB par fichier</small></p>
+                            <input type="file" id="diplomesFile" accept=".pdf" multiple style="display: none;">
+                        </div>
+                        <div id="diplomesPreview"></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Références professionnelles (PDF)</label>
+                        <div class="upload-zone" id="referencesUpload">
+                            <i class="fas fa-user-friends upload-icon"></i>
+                            <h6>Références professionnelles</h6>
+                            <p class="text-muted"><small>PDF uniquement - Max 3MB</small></p>
+                            <input type="file" id="referencesFile" accept=".pdf" style="display: none;">
+                        </div>
+                        <div id="referencesPreview"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Portfolio/Réalisations (PDF, ZIP)</label>
+                        <div class="upload-zone" id="portfolioUpload">
+                            <i class="fas fa-folder-open upload-icon"></i>
+                            <h6>Portfolio ou réalisations</h6>
+                            <p class="text-muted"><small>PDF ou ZIP - Max 10MB</small></p>
+                            <input type="file" id="portfolioFile" accept=".pdf,.zip" style="display: none;">
+                        </div>
+                        <div id="portfolioPreview"></div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Photo d'identité (JPG, PNG)</label>
+                        <div class="upload-zone" id="photoUpload">
+                            <i class="fas fa-camera upload-icon"></i>
+                            <h6>Photo d'identité</h6>
+                            <p class="text-muted"><small>JPG ou PNG - Max 2MB</small></p>
+                            <input type="file" id="photoFile" accept=".jpg,.jpeg,.png" style="display: none;">
+                        </div>
+                        <div id="photoPreview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Références professionnelles -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-user-tie"></i> Références professionnelles (Optionnel)
+                </h3>
+
+                <div id="referencesContainer">
+                    <div class="reference-form">
+                        <h6 class="mb-3">Référence #1</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nom de la référence</label>
+                                <input type="text" class="form-control" name="ref1_nom">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Poste/Fonction</label>
+                                <input type="text" class="form-control" name="ref1_poste">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Entreprise</label>
+                                <input type="text" class="form-control" name="ref1_entreprise">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" name="ref1_telephone">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="ref1_email">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Relation professionnelle</label>
+                            <select class="form-select" name="ref1_relation">
+                                <option value="">Sélectionnez...</option>
+                                <option value="Ex-superviseur">Ex-superviseur</option>
+                                <option value="Collègue">Collègue</option>
+                                <option value="Client">Client</option>
+                                <option value="Partenaire">Partenaire</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="reference-form">
+                        <h6 class="mb-3">Référence #2</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nom de la référence</label>
+                                <input type="text" class="form-control" name="ref2_nom">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Poste/Fonction</label>
+                                <input type="text" class="form-control" name="ref2_poste">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Entreprise</label>
+                                <input type="text" class="form-control" name="ref2_entreprise">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" name="ref2_telephone">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="ref2_email">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Relation professionnelle</label>
+                            <select class="form-select" name="ref2_relation">
+                                <option value="">Sélectionnez...</option>
+                                <option value="Ex-superviseur">Ex-superviseur</option>
+                                <option value="Collègue">Collègue</option>
+                                <option value="Client">Client</option>
+                                <option value="Partenaire">Partenaire</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Consentements -->
+            <div class="form-section-r">
+                <h3 class="section-title-r">
+                    <i class="fas fa-shield-alt"></i> Consentements et validations
+                </h3>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="consent1" name="consentement_donnees" required>
+                        <label for="consent1" class="form-label">
+                            <strong>J'accepte que mes données personnelles soient traitées dans le cadre de ma candidature</strong> <span class="required">*</span><br>
+                            <small class="text-muted">Vos données seront utilisées uniquement pour le processus de recrutement et ne seront pas partagées avec des tiers.</small>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="consent2" name="newsletter">
+                        <label for="consent2" class="form-label">
+                            J'accepte de recevoir des offres d'emploi similaires de PRO SERVICE INTERNATIONAL<br>
+                            <small class="text-muted">Vous pourrez vous désabonner à tout moment.</small>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="consent3" name="certification" required>
+                        <label for="consent3" class="form-label">
+                            <strong>Je certifie que toutes les informations fournies sont exactes et complètes</strong> <span class="required">*</span><br>
+                            <small class="text-muted">Toute fausse déclaration pourra entraîner le rejet de ma candidature.</small>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Simple Captcha -->
+                <div class="mt-4">
+                    <label class="form-label">Vérification anti-robot <span class="required">*</span></label>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="fs-5">Combien font <span id="captchaQuestion">7 + 3</span> ?</span>
+                        <input type="number" class="form-control" style="width: 100px;" id="captchaAnswer" required>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="generateCaptcha()">
+                            <i class="fas fa-refresh"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="captchaError">Réponse incorrecte</div>
+                </div>
+            </div>
+
+            <!-- Boutons d'action -->
+            <div class="form-section-r text-center">
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <button type="button" class="btn btn-outline-secondary" onclick="saveDraft()">
+                        <i class="fas fa-save me-2"></i>Enregistrer en brouillon
+                    </button>
+                    <button type="button" class="btn btn-outline-primary" onclick="previewCandidature()">
+                        <i class="fas fa-eye me-2"></i>Prévisualiser
+                    </button>
+                    <button type="button" class="btn btn-outline-danger" onclick="cancelCandidature()">
+                        <i class="fas fa-times me-2"></i>Annuler
+                    </button>
+                    <button type="submit" class="btn btn-success btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Envoyer la candidature
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Section Processus de recrutement -->
+        <div class="form-section-r">
+            <h3 class="section-title-r">
+                <i class="fas fa-route"></i> Processus de recrutement
+            </h3>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="process-step-r" data-step="1">
+                        <h6 class="text-primary mt-3">Réception de candidature</h6>
+                        <p class="text-muted small mb-0">Confirmation immédiate par email</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="process-step-r" data-step="2">
+                        <h6 class="text-primary mt-3">Présélection</h6>
+                        <p class="text-muted small mb-0">Réponse sous 7 jours ouvrés</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="process-step-r" data-step="3">
+                        <h6 class="text-primary mt-3">Entretien téléphonique</h6>
+                        <p class="text-muted small mb-0">Si présélectionné</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="process-step-r" data-step="4">
+                        <h6 class="text-primary mt-3">Entretien physique</h6>
+                        <p class="text-muted small mb-0">Si validé au téléphone</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="process-step-r" data-step="5">
+                        <h6 class="text-primary mt-3">Décision finale</h6>
+                        <p class="text-muted small mb-0">Réponse sous 15 jours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="form-section-r">
+            <h3 class="section-title-r">
+                <i class="fas fa-question-circle"></i> Questions fréquentes
+            </h3>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <i class="fas fa-file-pdf me-2"></i>Quels formats de CV acceptez-vous ?
+                    <i class="fas fa-chevron-down float-end"></i>
+                </div>
+                <div class="faq-answer">
+                    Nous acceptons uniquement les CV au format PDF pour garantir la compatibilité et la sécurité. La taille maximale est de 5MB.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <i class="fas fa-clock me-2"></i>Combien de temps pour une réponse ?
+                    <i class="fas fa-chevron-down float-end"></i>
+                </div>
+                <div class="faq-answer">
+                    Nous nous engageons à vous répondre sous 7 jours ouvrés pour la présélection, et sous 15 jours maximum pour la décision finale.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <i class="fas fa-briefcase me-2"></i>Puis-je postuler à plusieurs offres ?
+                    <i class="fas fa-chevron-down float-end"></i>
+                </div>
+                <div class="faq-answer">
+                    Oui, vous pouvez postuler à plusieurs offres qui correspondent à votre profil. Chaque candidature sera traitée individuellement.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <i class="fas fa-search me-2"></i>Comment suivre ma candidature ?
+                    <i class="fas fa-chevron-down float-end"></i>
+                </div>
+                <div class="faq-answer">
+                    Après envoi, vous recevrez un numéro de candidature par email. Vous pouvez nous contacter en mentionnant ce numéro pour connaître l'état d'avancement.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title"><i class="fas fa-check-circle me-2"></i>Candidature envoyée avec succès !</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="success-message">
+                        <h4><i class="fas fa-thumbs-up me-2"></i>Félicitations !</h4>
+                        <p class="mb-3">Votre candidature a été envoyée avec succès.</p>
+
+                        <div class="row text-start">
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-hashtag me-2"></i>Numéro de candidature</h6>
+                                <p class="fw-bold fs-5" id="numeroCandidature">CAND-2024-0001</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6><i class="fas fa-calendar me-2"></i>Date de soumission</h6>
+                                <p id="dateSoumission"></p>
+                            </div>
+                        </div>
+
+                        <h6 class="text-start mt-4"><i class="fas fa-route me-2"></i>Prochaines étapes :</h6>
+                        <ul class="text-start">
+                            <li>Vous recevrez un email de confirmation dans les minutes qui suivent</li>
+                            <li>Notre équipe RH étudiera votre dossier sous 7 jours</li>
+                            <li>Nous vous contacterons si votre profil correspond à nos attentes</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <h6><i class="fas fa-phone me-2"></i>Contact pour suivi</h6>
+                            <p>Email: recrutement@proservice-benin.com<br> Téléphone: +229 21 30 45 67</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="location.reload()">
+                        <i class="fas fa-plus me-2"></i>Postuler à une autre offre
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de prévisualisation -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-eye me-2"></i>Prévisualisation de votre candidature</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="previewContent">
+                    <!-- Le contenu sera généré dynamiquement -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Modifier</button>
+                    <button type="button" class="btn btn-success" onclick="submitForm()">
+                        <i class="fas fa-paper-plane me-2"></i>Confirmer l'envoi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicateur de progression flottant -->
+    <div class="floating-progress" id="progressIndicator" style="display: none;">
+        <h6 class="mb-2"><i class="fas fa-tasks me-2"></i>Progression</h6>
+        <div class="progress mb-2">
+            <div class="progress-bar" role="progressbar" id="progressBar" style="width: 0%"></div>
+        </div>
+        <small class="text-muted" id="progressText">0% complété</small>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>PRO SERVICE INTERNATIONAL</h5>
+                    <p>Votre partenaire de confiance pour les services RH & BTP en Afrique. Excellence, Innovation, Partenariat.</p>
+                    <div class="social-links-footer">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">BTP</a></li>
+                        <li><a href="#">Importation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Formations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">BTP & Construction</a></li>
+                        <li><a href="#">Industrie</a></li>
+                        <li><a href="#">Transport</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Cotonou, Bénin</p>
+                    <p><i class="fas fa-phone me-2"></i>+229 XX XX XX XX</p>
+                    <p><i class="fas fa-envelope me-2"></i>contact@psibenin.com</p>
+                </div>
+            </div>
+            <hr style="border-color: #ffffff33;">
+            <div class="text-center">
+                <p>&copy; 2024 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/22912345678" class="whatsapp-btn" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./assets/js/recrutement.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Réaliser un CV Professionnel - Guide Complet 2025</title>
+    <meta name="description" content="Découvrez comment créer un CV professionnel efficace étape par étape. Conseils, exemples et ressources pour réussir votre candidature.">
+    <meta name="keywords" content="CV, curriculum vitae, emploi, candidature, rédaction CV, conseils emploi, modèles CV">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+         :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+        /* Header Styles */
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+        
+        .header h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        /* Navigation */
+        
+        .table-of-contents {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .table-of-contents h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .table-of-contents li {
+            margin: 0.5rem 0;
+        }
+        
+        .table-of-contents a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .table-of-contents a:hover {
+            color: var(--primary-color);
+        }
+        
+        .table-of-contents i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+        /* Section Styles */
+        
+        .section {
+            margin: 4rem 0;
+            padding: 2rem 0;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .section-number {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .section h2 {
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        /* Card Styles */
+        
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            margin: 1.5rem 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        /* CV Example Styles */
+        
+        .cv-example {
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            margin: 2rem 0;
+        }
+        
+        .cv-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .cv-type-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .cv-type-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+        
+        .cv-type-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        /* Video Section */
+        
+        .video-section {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+        .video-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        /* Checklist Styles */
+        
+        .checklist {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-item i {
+            color: var(--success-color);
+            margin-right: 1rem;
+            font-size: 1.25rem;
+        }
+        /* Tips and Warnings */
+        
+        .tip {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .tip i {
+            color: var(--success-color);
+            margin-right: 0.5rem;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .warning i {
+            color: var(--warning-color);
+            margin-right: 0.5rem;
+        }
+        /* Resources Section */
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        /* Button Styles */
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        /* Footer */
+        
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            .cv-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1><i class="fas fa-file-alt me-3"></i>Comment Réaliser un CV Professionnel</h1>
+                    <p class="lead">Guide complet pour créer un CV efficace qui vous démarquera auprès des recruteurs</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Introduction -->
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Introduction</h2>
+                    <p class="lead">Dans un marché du travail de plus en plus compétitif, votre CV est votre première chance de faire bonne impression. C'est votre carte de visite professionnelle qui doit convaincre les recruteurs en quelques secondes seulement.</p>
+
+                    <p>Un CV bien conçu peut faire la différence entre décrocher un entretien et voir sa candidature écartée. Ce guide vous accompagnera étape par étape dans la création d'un CV professionnel, efficace et adapté aux exigences actuelles du
+                        marché de l'emploi.</p>
+
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Le saviez-vous ?</strong> Les recruteurs passent en moyenne 6 secondes à examiner un CV. Il est donc crucial de capter leur attention dès les premiers instants.
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!-- Table of Contents -->
+                    <div class="table-of-contents">
+                        <h3><i class="fas fa-list me-2"></i>Plan de l'article</h3>
+                        <ul>
+                            <li><a href="#etape1"><i class="fas fa-clipboard-list"></i>Préparer les informations</a></li>
+                            <li><a href="#etape2"><i class="fas fa-layout"></i>Choisir le bon modèle</a></li>
+                            <li><a href="#etape3"><i class="fas fa-pen"></i>Rédiger chaque section</a></li>
+                            <li><a href="#etape4"><i class="fas fa-palette"></i>Mettre en forme</a></li>
+                            <li><a href="#etape5"><i class="fas fa-check-circle"></i>Vérifier et adapter</a></li>
+                            <li><a href="#ressources"><i class="fas fa-external-link-alt"></i>Ressources complémentaires</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Étape 1 -->
+        <section class="section" id="etape1">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2>Préparer les informations nécessaires</h2>
+            </div>
+
+            <p>Avant de commencer la rédaction de votre CV, il est essentiel de rassembler toutes les informations pertinentes. Cette étape de préparation vous fera gagner du temps et garantira la cohérence de votre document.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-user me-2"></i>Informations personnelles</h4>
+                        <ul>
+                            <li>Nom et prénom</li>
+                            <li>Adresse complète</li>
+                            <li>Numéro de téléphone</li>
+                            <li>Adresse e-mail professionnelle</li>
+                            <li>Profils réseaux sociaux professionnels</li>
+                            <li>Site web ou portfolio (si applicable)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-briefcase me-2"></i>Expérience professionnelle</h4>
+                        <ul>
+                            <li>Postes occupés (du plus récent au plus ancien)</li>
+                            <li>Noms des entreprises</li>
+                            <li>Dates de début et de fin</li>
+                            <li>Responsabilités et missions principales</li>
+                            <li>Réalisations chiffrées</li>
+                            <li>Compétences développées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-graduation-cap me-2"></i>Formation et diplômes</h4>
+                        <ul>
+                            <li>Diplômes obtenus</li>
+                            <li>Établissements fréquentés</li>
+                            <li>Dates d'obtention</li>
+                            <li>Mentions spéciales</li>
+                            <li>Formations complémentaires</li>
+                            <li>Certifications professionnelles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-cogs me-2"></i>Compétences et atouts</h4>
+                        <ul>
+                            <li>Compétences techniques (hard skills)</li>
+                            <li>Compétences comportementales (soft skills)</li>
+                            <li>Langues parlées et niveau</li>
+                            <li>Logiciels maîtrisés</li>
+                            <li>Centres d'intérêt pertinents</li>
+                            <li>Projets personnels ou bénévoles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-example">
+                <h5><i class="fas fa-file-text me-2"></i>Exemple de fiche de préparation</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <strong>Contact :</strong><br> Marie Dupont<br> 123 rue de la Paix, 75001 Paris<br> 06.12.34.56.78
+                        <br> marie.dupont@email.com
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Dernière expérience :</strong><br> Chef de projet digital<br> Agence WebDev (2020-2024)<br> • Gestion de 15 projets web<br> • Équipe de 8 développeurs
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Formation :</strong><br> Master Marketing Digital<br> École Supérieure de Commerce<br> 2018 - Mention Bien
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Étape 2 -->
+        <section class="section" id="etape2">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2>Choisir le bon modèle de CV</h2>
+            </div>
+
+            <p>Le choix du modèle de CV dépend de votre profil, de votre secteur d'activité et du poste visé. Voici les trois types principaux de CV avec leurs avantages et inconvénients.</p>
+
+            <div class="cv-types">
+                <div class="cv-type-card">
+                    <div class="cv-type-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h4>CV Chronologique</h4>
+                    <p><strong>Idéal pour :</strong> Profils avec une progression de carrière linéaire</p>
+                    <ul class="text-start">
+                        <li>Met en valeur l'évolution professionnelle</li>
+                        <li>Facile à lire pour les recruteurs</li>
+                        <li>Format le plus utilisé</li>
+                    </ul>
+                    <div class="warning">
+                        <i class="fas fa-exclamation-triangle"></i> À éviter si vous avez des trous dans votre parcours
+                    </div>
+                </div>
+
+                <div class="cv-type-card">
+                    <div class="cv-type-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h4>CV Fonctionnel</h4>
+                    <p><strong>Idéal pour :</strong> Reconversion professionnelle ou parcours atypique</p>
+                    <ul class="text-start">
+                        <li>Met l'accent sur les compétences</li>
+                        <li>Masque les périodes d'inactivité</li>
+                        <li>Valorise les transferts de compétences</li>
+                    </ul>
+                    <div class="warning">
+                        <i class="fas fa-exclamation-triangle"></i> Moins apprécié par certains recruteurs
+                    </div>
+                </div>
+
+                <div class="cv-type-card">
+                    <div class="cv-type-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4>CV Mixte</h4>
+                    <p><strong>Idéal pour :</strong> Profils expérimentés avec des compétences spécialisées</p>
+                    <ul class="text-start">
+                        <li>Combine les avantages des deux types</li>
+                        <li>Met en valeur expérience ET compétences</li>
+                        <li>Flexible et adaptable</li>
+                    </ul>
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i> Le plus polyvalent pour la plupart des candidats
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h4><i class="fab fa-youtube me-2"></i>Ressource vidéo recommandée</h4>
+                <p>Pour approfondir le choix du type de CV, consultez cette vidéo explicative :</p>
+                <div class="video-placeholder">
+                    <i class="fab fa-youtube"></i>
+                    <h5>Les différents types de CV expliqués</h5>
+                    <p>Cliquez pour visionner sur YouTube</p>
+                    <small>Durée : 8 minutes</small>
+                </div>
+                <p><strong>Lien :</strong> <a href="https://www.youtube.com/watch?v=xyz123" target="_blank" class="text-decoration-none">https://www.youtube.com/watch?v=xyz123</a></p>
+            </div>
+        </section>
+
+        <!-- Étape 3 -->
+        <section class="section" id="etape3">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2>Rédiger chaque section du CV</h2>
+            </div>
+
+            <p>Chaque section de votre CV a un rôle spécifique et doit être rédigée avec soin. Voici comment optimiser chaque élément.</p>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-star me-2"></i>L'accroche professionnelle</h4>
+                        <p>Située en haut du CV, elle résume votre profil en 2-3 lignes percutantes.</p>
+                        <div class="cv-example">
+                            <strong>Exemple :</strong><br> "Chef de projet digital avec 5 ans d'expérience en gestion d'équipes techniques. Expert en développement web et marketing digital, recherche un poste de Directeur Technique dans une startup innovante."
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-lightbulb"></i> Adaptez votre accroche à chaque offre d'emploi
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-briefcase me-2"></i>Expérience professionnelle</h4>
+                        <p>Présentez vos expériences de la plus récente à la plus ancienne.</p>
+                        <div class="cv-example">
+                            <strong>Structure recommandée :</strong><br>
+                            <strong>Poste occupé</strong> | Nom de l'entreprise<br>
+                            <em>Dates</em><br> • Mission principale avec résultat chiffré<br> • Responsabilité clé<br> • Compétence développée
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-lightbulb"></i> Utilisez des verbes d'action et des chiffres
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-graduation-cap me-2"></i>Formation</h4>
+                        <p>Mentionnez vos diplômes du plus élevé au moins élevé.</p>
+                        <ul>
+                            <li>Nom du diplôme</li>
+                            <li>Établissement</li>
+                            <li>Année d'obtention</li>
+                            <li>Mention (si bonne)</li>
+                            <li>Spécialisation si pertinente</li>
+                        </ul>
+                        <div class="warning">
+                            <i class="fas fa-exclamation-triangle"></i> Évitez de mentionner le baccalauréat si vous avez un diplôme supérieur
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h4><i class="fas fa-cogs me-2"></i>Compétences</h4>
+                        <p>Distinguez compétences techniques et comportementales.</p>
+                        <div class="cv-example">
+                            <strong>Compétences techniques :</strong><br> • Langages : HTML, CSS, JavaScript<br> • Outils : Photoshop, Figma, Trello<br> • Langues : Anglais (C1), Espagnol (B2)
+                        </div>
+                        <div class="cv-example mt-2">
+                            <strong>Compétences comportementales :</strong><br> Leadership • Gestion de projet • Communication • Créativité
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h4><i class="fab fa-youtube me-2"></i>Tutoriel de rédaction</h4>
+                <p>Découvrez comment rédiger efficacement chaque section de votre CV :</p>
+                <div class="video-placeholder">
+                    <i class="fab fa-youtube"></i>
+                    <h5>Rédiger un CV qui attire l'attention</h5>
+                    <p>Techniques de rédaction professionnelle</p>
+                    <small>Durée : 12 minutes</small>
+                </div>
+                <p><strong>Lien :</strong> <a href="https://www.youtube.com/watch?v=abc456" target="_blank" class="text-decoration-none">https://www.youtube.com/watch?v=abc456</a></p>
+            </div>
+        </section>
+
+        <!-- Étape 4 -->
+        <section class="section" id="etape4">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2>Mettre en forme et personnaliser son CV</h2>
+            </div>
+
+            <p>La présentation de votre CV est aussi importante que son contenu. Un design professionnel et lisible facilitera la lecture et créera une première impression positive.</p>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <h4>Principes de mise en page</h4>
+
+                    <div class="info-card">
+                        <h5><i class="fas fa-font me-2"></i>Typographie</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Polices recommandées :</strong>
+                                <ul>
+                                    <li>Arial (classique et lisible)</li>
+                                    <li>Calibri (moderne et claire)</li>
+                                    <li>Helvetica (professionnelle)</li>
+                                    <li>Open Sans (web-friendly)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Tailles conseillées :</strong>
+                                <ul>
+                                    <li>Nom : 18-22pt</li>
+                                    <li>Titres de section : 14-16pt</li>
+                                    <li>Texte principal : 11-12pt</li>
+                                    <li>Informations secondaires : 10pt</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h5><i class="fas fa-palette me-2"></i>Couleurs</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Palette professionnelle :</strong>
+                                <div class="d-flex mb-2">
+                                    <div style="width: 30px; height: 30px; background: #2563eb; border-radius: 4px;" class="me-2"></div>
+                                    <span>Bleu professionnel</span>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div style="width: 30px; height: 30px; background: #1f2937; border-radius: 4px;" class="me-2"></div>
+                                    <span>Gris anthracite</span>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div style="width: 30px; height: 30px; background: #059669; border-radius: 4px;" class="me-2"></div>
+                                    <span>Vert corporate</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <strong>À éviter :</strong> couleurs trop vives, rose, orange flashy, plus de 3 couleurs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h5><i class="fas fa-align-left me-2"></i>Structure et espacement</h5>
+                        <ul>
+                            <li><strong>Marges :</strong> 2-2.5 cm de chaque côté</li>
+                            <li><strong>Interligne :</strong> 1.15 à 1.5 pour une lecture confortable</li>
+                            <li><strong>Sections :</strong> Séparez clairement avec des espaces ou des lignes</li>
+                            <li><strong>Longueur :</strong> 1 page pour les débutants, 2 pages maximum pour les expérimentés</li>
+                            <li><strong>Format :</strong> A4 standard, exportation en PDF</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="info-card">
+                        <h4><i class="fas fa-before-after me-2"></i>Avant / Après</h4>
+                        <div class="cv-example">
+                            <strong>❌ Avant :</strong><br>
+                            <small style="font-family: Times, serif;">
+                            Marie DUPONT<br>
+                            123 rue de la paix paris<br>
+                            Experience:<br>
+                            -Chef de projet chez WebDev de 2020 a 2024<br>
+                            -Stage marketing en 2019<br>
+                            Formation: Master marketing 2018
+                            </small>
+                        </div>
+
+                        <div class="cv-example mt-3">
+                            <strong>✅ Après :</strong><br>
+                            <div style="font-family: 'Inter', sans-serif;">
+                                <strong style="font-size: 18px; color: #2563eb;">MARIE DUPONT</strong><br>
+                                <small>123 rue de la Paix, 75001 Paris<br>
+                                06.12.34.56.78 • marie.dupont@email.com</small><br><br>
+
+                                <strong style="color: #2563eb;">EXPÉRIENCE PROFESSIONNELLE</strong><br>
+                                <strong>Chef de projet digital</strong> | WebDev<br>
+                                <em>2020 - 2024</em><br> • Gestion de 15 projets web (+40% de ROI)<br><br>
+
+                                <strong style="color: #2563eb;">FORMATION</strong><br>
+                                <strong>Master Marketing Digital</strong> - 2018<br> École Supérieure de Commerce
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h4><i class="fab fa-youtube me-2"></i>Tutoriel mise en page</h4>
+                <p>Apprenez à créer un CV visuellement attractif :</p>
+                <div class="video-placeholder">
+                    <i class="fab fa-youtube"></i>
+                    <h5>Design et mise en page d'un CV professionnel</h5>
+                    <p>Techniques de design et outils recommandés</p>
+                    <small>Durée : 15 minutes</small>
+                </div>
+                <p><strong>Lien :</strong> <a href="https://www.youtube.com/watch?v=def789" target="_blank" class="text-decoration-none">https://www.youtube.com/watch?v=def789</a></p>
+            </div>
+        </section>
+
+        <!-- Étape 5 -->
+        <section class="section" id="etape5">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2>Vérifier et adapter son CV</h2>
+            </div>
+
+            <p>Avant d'envoyer votre CV, une phase de vérification et d'adaptation est essentielle. Cette étape peut faire la différence entre un CV qui passe inaperçu et un CV qui retient l'attention.</p>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="checklist">
+                        <h4><i class="fas fa-check-double me-2"></i>Checklist de vérification</h4>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Orthographe et grammaire</strong><br>
+                                <small>Relisez plusieurs fois, utilisez un correcteur, faites relire par un proche</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cohérence des dates</strong><br>
+                                <small>Vérifiez que toutes les dates sont logiques et sans contradiction</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Informations de contact à jour</strong><br>
+                                <small>Téléphone, email, adresse doivent être actuels et professionnels</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Adaptation au poste visé</strong><br>
+                                <small>Mots-clés de l'offre, compétences pertinentes mises en avant</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Format et présentation</strong><br>
+                                <small>Police lisible, couleurs professionnelles, export PDF de qualité</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Longueur appropriée</strong><br>
+                                <small>1 page pour moins de 5 ans d'expérience, 2 pages maximum pour les profils senior</small>
+                            </div>
+                        </div>
+
+                        <div class="checklist-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Nom de fichier professionnel</strong><br>
+                                <small>Format : "Prenom_NOM_CV_Poste.pdf" (ex: Marie_DUPONT_CV_ChefProjet.pdf)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="info-card">
+                        <h4><i class="fas fa-target me-2"></i>Adaptation au poste</h4>
+                        <p>Personnalisez votre CV pour chaque candidature :</p>
+
+                        <div class="cv-example">
+                            <strong>Offre d'emploi :</strong><br> "Recherche Chef de projet digital expérimenté en <em>gestion d'équipe</em> et <em>méthodes agiles</em>"
+                        </div>
+
+                        <div class="cv-example mt-2">
+                            <strong>Adaptation CV :</strong><br> • Mettre "gestion d'équipe" en évidence<br> • Mentionner la certification Scrum<br> • Quantifier : "équipe de 8 développeurs"<br> • Utiliser le vocabulaire de l'offre
+                        </div>
+
+                        <div class="tip">
+                            <i class="fas fa-lightbulb"></i> Créez une version de base puis adaptez-la pour chaque candidature
+                        </div>
+                    </div>
+
+                    <div class="info-card mt-3">
+                        <h4><i class="fas fa-times-circle me-2"></i>Erreurs à éviter</h4>
+                        <ul>
+                            <li>Fautes d'orthographe</li>
+                            <li>Informations personnelles trop intimes</li>
+                            <li>Photo non professionnelle</li>
+                            <li>CV générique non adapté</li>
+                            <li>Mensonges ou exagérations</li>
+                            <li>Format non lisible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h4><i class="fab fa-youtube me-2"></i>Les erreurs à éviter</h4>
+                <p>Découvrez les principales erreurs qui peuvent compromettre votre candidature :</p>
+                <div class="video-placeholder">
+                    <i class="fab fa-youtube"></i>
+                    <h5>Top 10 des erreurs de CV à éviter absolument</h5>
+                    <p>Conseils d'expert pour un CV sans fautes</p>
+                    <small>Durée : 10 minutes</small>
+                </div>
+                <p><strong>Lien :</strong> <a href="https://www.youtube.com/watch?v=ghi012" target="_blank" class="text-decoration-none">https://www.youtube.com/watch?v=ghi012</a></p>
+            </div>
+        </section>
+
+        <!-- Ressources complémentaires -->
+        <section class="section" id="ressources">
+            <div class="section-header">
+                <div class="section-number"><i class="fas fa-external-link-alt"></i></div>
+                <h2>Ressources complémentaires</h2>
+            </div>
+
+            <p>Pour vous accompagner dans la création de votre CV, voici une sélection d'outils et de ressources utiles.</p>
+
+            <h4>Générateurs de CV en ligne</h4>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <i class="fas fa-magic"></i>
+                    <h5>Canva</h5>
+                    <p>Templates modernes et personnalisables</p>
+                    <small>Gratuit avec options premium</small>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h5>CVDesignR</h5>
+                    <p>Création rapide et professionnelle</p>
+                    <small>Interface française</small>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-rocket"></i>
+                    <h5>Zety</h5>
+                    <p>Conseils personnalisés inclus</p>
+                    <small>Essai gratuit disponible</small>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-linkedin"></i>
+                    <h5>LinkedIn</h5>
+                    <p>Export direct depuis le profil</p>
+                    <small>Pratique pour mise à jour</small>
+                </div>
+            </div>
+
+            <h4 class="mt-5">Modèles gratuits à télécharger</h4>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <i class="fas fa-download"></i>
+                    <h5>Modèle Classic</h5>
+                    <p>Format traditionnel, tous secteurs</p>
+                    <button class="btn btn-primary-custom btn-sm mt-2">Télécharger PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-palette"></i>
+                    <h5>Modèle Créatif</h5>
+                    <p>Design moderne pour métiers créatifs</p>
+                    <button class="btn btn-primary-custom btn-sm mt-2">Télécharger PDF</button>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h5>Modèle Tech</h5>
+                    <p>Optimisé pour les métiers du numérique</p>
+                    <button class="btn btn-primary-custom btn-sm mt-2">Télécharger PDF</button>
+                </div>
+            </div>
+
+            <div class="info-card mt-4">
+                <h4><i class="fas fa-book me-2"></i>Lectures recommandées</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>"Le CV gagnant"</strong> - Techniques de recrutement</li>
+                            <li><strong>"Réussir sa candidature"</strong> - Guide complet</li>
+                            <li><strong>"Digital RH"</strong> - CV à l'ère numérique</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tip">
+                            <i class="fas fa-lightbulb"></i> Consultez également les blogs RH et les sites d'emploi pour rester à jour sur les tendances
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2><i class="fas fa-flag-checkered me-3"></i>Conclusion</h2>
+                    <p class="lead">Créer un CV professionnel efficace est un investissement dans votre avenir professionnel. En suivant ces étapes méthodiquement, vous augmentez considérablement vos chances de décrocher des entretiens.</p>
+
+                    <div class="info-card text-start">
+                        <h4>Points clés à retenir :</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Préparez soigneusement vos informations</li>
+                                    <li>Choisissez le format adapté à votre profil</li>
+                                    <li>Rédigez de manière claire et percutante</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Soignez la présentation visuelle</li>
+                                    <li>Adaptez chaque CV au poste visé</li>
+                                    <li>Relisez et faites relire avant envoi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Conseil final :</strong> Votre CV n'est que le premier pas. Préparez-vous également pour l'entretien et travaillez votre présence en ligne (LinkedIn, portfolio).
+                    </div>
+
+                    <div class="mt-4">
+                        <button class="btn btn-primary-custom me-3">
+                            <i class="fas fa-download me-2"></i>Télécharger un modèle
+                        </button>
+                        <button class="btn btn-outline-primary">
+                            <i class="fas fa-share me-2"></i>Partager cet article
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>À propos de ce guide</h5>
+                    <p>Ce guide complet a été conçu pour vous accompagner dans la création d'un CV professionnel qui vous démarquera sur le marché de l'emploi. Basé sur les meilleures pratiques du recrutement moderne, il est régulièrement mis à jour pour
+                        refléter les tendances actuelles.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Ressources utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-file-alt me-2"></i>Modèles de CV</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-envelope me-2"></i>Lettres de motivation</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-users me-2"></i>Conseils entretien</a></li>
+                        <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-linkedin me-2"></i>Optimiser LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Guide Emploi. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small>Dernière mise à jour : Juin 2025</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Button interactions
+        document.querySelectorAll('.btn-primary-custom').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Add download/action functionality here
+                console.log('Action clicked:', this.textContent.trim());
+            });
+        });
+
+        // Video placeholder interactions
+        document.querySelectorAll('.video-placeholder').forEach(placeholder => {
+            placeholder.addEventListener('click', function() {
+                // In a real implementation, this would open the YouTube video
+                console.log('Video clicked');
+            });
+
+            placeholder.style.cursor = 'pointer';
+        });
+    </script>
+</body>
+
+</html>

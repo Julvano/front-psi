@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - PRO SERVICE INTERNATIONAL</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --accent-green: #009B4D;
+            --light-gray: #F5F5F5;
+            --white: #FFFFFF;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-blue) !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark-gray) !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--accent-green) !important;
+        }
+
+        .navbar-nav .nav-link.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-green);
+            bottom: -5px;
+            left: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            color: var(--white);
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="25" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="25" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .search-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .search-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-control, .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 12px 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 0.2rem rgba(0, 155, 77, 0.25);
+        }
+
+        .btn-search {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #007a3e 100%);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
+            font-weight: 600;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .btn-search:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 155, 77, 0.3);
+            color: var(--white);
+        }
+
+        /* Filters Section */
+        .filters-section {
+            background: var(--light-gray);
+            padding: 2rem 0;
+        }
+
+        .filter-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1rem;
+        }
+
+        .filter-title {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-option {
+            background: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark-gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-option:hover,
+        .filter-option.active {
+            background: var(--accent-green);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .results-counter {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Formation Cards */
+        .formations-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .formation-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+
+        .formation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .formation-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .formation-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formation-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .formation-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge-sector {
+            background: var(--accent-green);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .badge-level {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .formation-details {
+            flex: 1;
+        }
+
+        .formation-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .formation-detail i {
+            color: var(--accent-green);
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        .formation-price {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .price-amount {
+            color: var(--accent-green);
+            font-weight: 800;
+            font-size: 1.3rem;
+        }
+
+        .formation-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn-inscribe {
+            background: var(--accent-green);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: 600;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .btn-inscribe:hover {
+            background: #007a3e;
+            transform: translateY(-2px);
+        }
+
+        .btn-info {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: 600;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Advantages Section */
+        .advantages-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+        }
+
+        .advantage-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .advantage-icon {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #007a3e 100%);
+            color: var(--white);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .advantage-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 4rem 0;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            height: 100%;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--dark-gray);
+        }
+
+        .testimonial-author {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-section h5 {
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20b85a;
+            transform: scale(1.1);
+            color: var(--white);
+        }
+
+        .back-to-top {
+            background: var(--primary-blue);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-green);
+            transform: scale(1.1);
+            color: var(--white);
+        }
+
+        /* Modal */
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            color: var(--white);
+            border-radius: 15px 15px 0 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .search-card {
+                padding: 1.5rem;
+            }
+            
+            .formation-actions {
+                flex-direction: column;
+            }
+            
+            .filter-options {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-briefcase me-2"></i>PRO SERVICE INTERNATIONAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apropos">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#formation">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#emploi">Emploi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Formations Professionnelles</h1>
+                <p class="hero-subtitle">Développez vos compétences avec nos programmes de formation certifiés</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="search-card">
+                            <h4 class="search-title">Trouvez votre formation idéale</h4>
+                            <form id="searchForm">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="formationType" placeholder="Type de formation">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-select" id="villeSelect">
+                                            <option value="">Toutes les villes</option>
+                                            <option value="Cotonou">Cotonou</option>
+                                            <option value="Porto-Novo">Porto-Novo</option>
+                                            <option value="Parakou">Parakou</option>
+                                            <option value="Abomey">Abomey</option>
+                                            <option value="Natitingou">Natitingou</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-select" id="secteurSelect">
+                                            <option value="">Tous les secteurs</option>
+                                            <option value="BTP">BTP</option>
+                                            <option value="Industrie">Industrie</option>
+                                            <option value="Transport">Transport</option>
+                                            <option value="Sécurité">Sécurité</option>
+                                            <option value="Informatique">Informatique</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-search w-100">
+                                            <i class="fas fa-search me-2"></i>Rechercher
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="filter-card">
+                        <h6 class="filter-title">Durée</h6>
+                        <div class="filter-options">
+                            <div class="filter-option" data-filter="duree" data-value="1 semaine">1 semaine</div>
+                            <div class="filter-option" data-filter="duree" data-value="1 mois">1 mois</div>
+                            <div class="filter-option" data-filter="duree" data-value="3 mois">3 mois</div>
+                            <div class="filter-option" data-filter="duree" data-value="6 mois">6 mois</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="filter-card">
+                        <h6 class="filter-title">Niveau</h6>
+                        <div class="filter-options">
+                            <div class="filter-option" data-filter="niveau" data-value="Débutant">Débutant</div>
+                            <div class="filter-option" data-filter="niveau" data-value="Intermédiaire">Intermédiaire</div>
+                            <div class="filter-option" data-filter="niveau" data-value="Avancé">Avancé</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="filter-card">
+                        <h6 class="filter-title">Certification</h6>
+                        <div class="filter-options">
+                            <div class="filter-option" data-filter="certification" data-value="Avec">Avec certification</div>
+                            <div class="filter-option" data-filter="certification" data-value="Sans">Sans certification</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="results-counter">
+                        <span id="formationCount">9</span> formations trouvées
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section class="formations-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Formations Disponibles</h2>
+                <p>Choisissez parmi notre large gamme de formations professionnelles</p>
+            </div>
+
+            <div class="row" id="formationsContainer">
+                <!-- Formation 1 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="BTP" data-ville="Cotonou" data-duree="1 mois" data-niveau="Débutant" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Conduite d'engins de chantier</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">BTP</span>
+                                <span class="badge-level">Débutant</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 15 Juillet 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">250,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 4 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Industrie" data-ville="Cotonou" data-duree="6 mois" data-niveau="Avancé" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Maintenance industrielle</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Industrie</span>
+                                <span class="badge-level">Avancé</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 5 Août 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">850,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 5 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="BTP" data-ville="Abomey" data-duree="3 mois" data-niveau="Intermédiaire" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Électricité bâtiment</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">BTP</span>
+                                <span class="badge-level">Intermédiaire</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Abomey</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 10 Août 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">400,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 6 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Transport" data-ville="Cotonou" data-duree="1 semaine" data-niveau="Débutant" data-certification="Sans">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Conduite défensive</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Transport</span>
+                                <span class="badge-level">Débutant</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 semaine</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 28 Juillet 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>Sans certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">50,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 7 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Informatique" data-ville="Porto-Novo" data-duree="1 mois" data-niveau="Débutant" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Informatique bureautique</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Informatique</span>
+                                <span class="badge-level">Débutant</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Porto-Novo</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 20 Juillet 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">150,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 8 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="BTP" data-ville="Cotonou" data-duree="3 mois" data-niveau="Avancé" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Gestion de projet BTP</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">BTP</span>
+                                <span class="badge-level">Avancé</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 12 Août 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">600,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 9 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Sécurité" data-ville="Natitingou" data-duree="1 semaine" data-niveau="Débutant" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Premiers secours</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Sécurité</span>
+                                <span class="badge-level">Débutant</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Natitingou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 semaine</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 25 Juillet 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">85,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi choisir nos formations ?</h2>
+                <p>Des avantages qui font la différence dans votre parcours professionnel</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h5 class="advantage-title">Formateurs Certifiés</h5>
+                        <p>Nos formateurs sont des experts reconnus dans leur domaine avec une solide expérience pratique.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h5 class="advantage-title">Équipements Modernes</h5>
+                        <p>Nous disposons d'équipements de pointe pour une formation pratique et professionnelle.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h5 class="advantage-title">Suivi Personnalisé</h5>
+                        <p>Chaque stagiaire bénéficie d'un accompagnement individuel pour maximiser sa réussite.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h5 class="advantage-title">Certification Reconnue</h5>
+                        <p>Nos certifications sont reconnues par les entreprises et valorisent votre CV.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Témoignages de nos stagiaires</h2>
+                <p>Découvrez l'expérience de ceux qui nous ont fait confiance</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Excellente formation en soudure industrielle. Les formateurs sont très compétents et les équipements de qualité. Je recommande vivement !"</p>
+                        <div class="testimonial-author">
+                            <strong>Amadou KONE</strong><br>
+                            <small>Formation Soudure Industrielle</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Grâce à la formation en conduite d'engins, j'ai pu décrocher un emploi dans une grande entreprise de BTP. Merci PRO SERVICE !"</p>
+                        <div class="testimonial-author">
+                            <strong>Marie ADJOVI</strong><br>
+                            <small>Formation Conduite d'Engins</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <p class="testimonial-text">"Formation très complète en maintenance industrielle. Le suivi post-formation m'a aidé à bien m'intégrer dans mon nouveau poste."</p>
+                        <div class="testimonial-author">
+                            <strong>Jean-Baptiste HOUNGBO</strong><br>
+                            <small>Formation Maintenance Industrielle</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5><i class="fas fa-briefcase me-2"></i>PRO SERVICE INTERNATIONAL</h5>
+                        <p>Votre partenaire de confiance pour l'emploi et la formation professionnelle au Bénin.</p>
+                        <div class="social-links">
+                            <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#">Recrutement</a></li>
+                            <li><a href="#">Formation</a></li>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Intérim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Secteurs</h5>
+                        <ul>
+                            <li><a href="#">BTP</a></li>
+                            <li><a href="#">Industrie</a></li>
+                            <li><a href="#">Transport</a></li>
+                            <li><a href="#">Sécurité</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Contact</h5>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Cotonou, Bénin</p>
+                        <p><i class="fas fa-phone me-2"></i>+229 XX XX XX XX</p>
+                        <p><i class="fas fa-envelope me-2"></i>contact@proservice-benin.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal d'inscription -->
+    <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inscriptionModalLabel">
+                        <i class="fas fa-user-plus me-2"></i>Inscription à la formation
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="inscriptionForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nom" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="nom" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="telephone" class="form-label">Téléphone</label>
+                                <input type="tel" class="form-control" id="telephone" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="ville" class="form-label">Ville</label>
+                                <select class="form-select" id="ville" required>
+                                    <option value="">Choisir une ville</option>
+                                    <option value="Cotonou">Cotonou</option>
+                                    <option value="Porto-Novo">Porto-Novo</option>
+                                    <option value="Parakou">Parakou</option>
+                                    <option value="Abomey">Abomey</option>
+                                    <option value="Natitingou">Natitingou</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experience" class="form-label">Expérience professionnelle</label>
+                            <textarea class="form-control" id="experience" rows="3" placeholder="Décrivez brièvement votre expérience..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="motivation" class="form-label">Motivation</label>
+                            <textarea class="form-control" id="motivation" rows="3" placeholder="Pourquoi souhaitez-vous suivre cette formation ?"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="conditions" required>
+                            <label class="form-check-label" for="conditions">
+                                J'accepte les conditions générales et la politique de confidentialité
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-search" onclick="submitInscription()">
+                        <i class="fas fa-paper-plane me-2"></i>Envoyer ma candidature
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/+229XXXXXXXX" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="floating-btn back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Variables pour le filtrage
+        let allFormations = [];
+        let filteredFormations = [];
+        let currentFilters = {
+            sector: '',
+            ville: '',
+            duree: '',
+            niveau: '',
+            certification: '',
+            search: ''
+        };
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeFormations();
+            setupEventListeners();
+            setupScrollAnimations();
+        });
+
+        // Initialiser les formations
+        function initializeFormations() {
+            const formationItems = document.querySelectorAll('.formation-item');
+            allFormations = Array.from(formationItems).map(item => ({
+                element: item,
+                sector: item.dataset.sector,
+                ville: item.dataset.ville,
+                duree: item.dataset.duree,
+                niveau: item.dataset.niveau,
+                certification: item.dataset.certification,
+                title: item.querySelector('.formation-title').textContent.toLowerCase()
+            }));
+            filteredFormations = [...allFormations];
+            updateFormationCount();
+        }
+
+        // Configuration des événements
+        function setupEventListeners() {
+            // Recherche en temps réel
+            document.getElementById('formationType').addEventListener('input', handleSearch);
+            document.getElementById('villeSelect').addEventListener('change', handleVilleFilter);
+            document.getElementById('secteurSelect').addEventListener('change', handleSectorFilter);
+            
+            // Formulaire de recherche
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                applyFilters();
+            });
+
+            // Filtres avancés
+            document.querySelectorAll('.filter-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const filterType = this.dataset.filter;
+                    const filterValue = this.dataset.value;
+                    
+                    // Toggle active state
+                    const siblings = document.querySelectorAll(`[data-filter="${filterType}"]`);
+                    siblings.forEach(s => s.classList.remove('active'));
+                    
+                    if (currentFilters[filterType] !== filterValue) {
+                        this.classList.add('active');
+                        currentFilters[filterType] = filterValue;
+                    } else {
+                        currentFilters[filterType] = '';
+                    }
+                    
+                    applyFilters();
+                });
+            });
+
+            // Retour en haut
+            window.addEventListener('scroll', function() {
+                const backToTop = document.getElementById('backToTop');
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            document.getElementById('backToTop').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Gestion de la recherche
+        function handleSearch() {
+            currentFilters.search = this.value.toLowerCase();
+            applyFilters();
+        }
+
+        // Gestion du filtre ville
+        function handleVilleFilter() {
+            currentFilters.ville = this.value;
+            applyFilters();
+        }
+
+        // Gestion du filtre secteur
+        function handleSectorFilter() {
+            currentFilters.sector = this.value;
+            applyFilters();
+        }
+
+        // Appliquer tous les filtres
+        function applyFilters() {
+            filteredFormations = allFormations.filter(formation => {
+                // Filtre recherche
+                if (currentFilters.search && !formation.title.includes(currentFilters.search)) {
+                    return false;
+                }
+                
+                // Filtre secteur
+                if (currentFilters.sector && formation.sector !== currentFilters.sector) {
+                    return false;
+                }
+                
+                // Filtre ville
+                if (currentFilters.ville && formation.ville !== currentFilters.ville) {
+                    return false;
+                }
+                
+                // Filtre durée
+                if (currentFilters.duree && formation.duree !== currentFilters.duree) {
+                    return false;
+                }
+                
+                // Filtre niveau
+                if (currentFilters.niveau && formation.niveau !== currentFilters.niveau) {
+                    return false;
+                }
+                
+                // Filtre certification
+                if (currentFilters.certification) {
+                    const hasCertification = formation.certification === 'Avec';
+                    const wantsCertification = currentFilters.certification === 'Avec';
+                    if (hasCertification !== wantsCertification) {
+                        return false;
+                    }
+                }
+                
+                return true;
+            });
+
+            updateFormationDisplay();
+            updateFormationCount();
+        }
+
+        // Mettre à jour l'affichage des formations
+        function updateFormationDisplay() {
+            allFormations.forEach(formation => {
+                if (filteredFormations.includes(formation)) {
+                    formation.element.style.display = 'block';
+                    formation.element.classList.add('fade-in-up');
+                } else {
+                    formation.element.style.display = 'none';
+                }
+            });
+        }
+
+        // Mettre à jour le compteur
+        function updateFormationCount() {
+            document.getElementById('formationCount').textContent = filteredFormations.length;
+        }
+
+        // Animations au scroll
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                    }
+                });
+            }, observerOptions);
+
+            // Observer les cartes de formation
+            document.querySelectorAll('.formation-card, .advantage-card, .testimonial-card').forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        // Soumission du formulaire d'inscription
+        function submitinfo">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 2 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Industrie" data-ville="Porto-Novo" data-duree="3 mois" data-niveau="Intermédiaire" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Soudure industrielle</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Industrie</span>
+                                <span class="badge-level">Intermédiaire</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Porto-Novo</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3 mois</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 1er Août 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">450,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-info">Plus d'infos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 3 -->
+                <div class="col-lg-4 col-md-6 formation-item" data-sector="Sécurité" data-ville="Parakou" data-duree="1 semaine" data-niveau="Débutant" data-certification="Avec">
+                    <div class="formation-card">
+                        <div class="formation-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="formation-content">
+                            <h5 class="formation-title">Sécurité au travail</h5>
+                            <div class="formation-badges">
+                                <span class="badge-sector">Sécurité</span>
+                                <span class="badge-level">Débutant</span>
+                            </div>
+                            <div class="formation-details">
+                                <div class="formation-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Parakou</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1 semaine</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Début: 22 Juillet 2025</span>
+                                </div>
+                                <div class="formation-detail">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Avec certification</span>
+                                </div>
+                            </div>
+                            <div class="formation-price">
+                                <div class="price-amount">75,000 FCFA</div>
+                            </div>
+                            <div class="formation-actions">
+                                <button class="btn btn-inscribe" data-bs-toggle="modal" data-bs-target="#inscriptionModal">S'inscrire</button>
+                                <button class="btn btn-
+
+
+
+// Soumission du formulaire d'inscription
+        function submitInscription() {
+            const form = document.getElementById('inscriptionForm');
+            const formData = new FormData(form);
+            
+            // Validation des champs requis
+            const nom = document.getElementById('nom').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telephone = document.getElementById('telephone').value.trim();
+            const ville = document.getElementById('ville').value;
+            const conditions = document.getElementById('conditions').checked;
+            
+            if (!nom || !email || !telephone || !ville || !conditions) {
+                alert('Veuillez remplir tous les champs obligatoires et accepter les conditions.');
+                return;
+            }
+            
+            // Validation de l'email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Veuillez saisir une adresse email valide.');
+                return;
+            }
+            
+            // Simulation de l'envoi
+            const submitBtn = document.querySelector('[onclick="submitInscription()"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            // Simulation d'une requête
+            setTimeout(() => {
+                alert('Votre candidature a été envoyée avec succès ! Nous vous recontacterons sous 48h.');
+                
+                // Réinitialiser le formulaire
+                form.reset();
+                
+                // Fermer le modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('inscriptionModal'));
+                modal.hide();
+                
+                // Restaurer le bouton
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        // Animation des éléments au scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.formation-card, .advantage-card, .testimonial-card');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('animate-in');
+                }
+            });
+        }
+
+        // Scroll smooth pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mise à jour du titre du modal selon la formation sélectionnée
+        document.querySelectorAll('.btn-inscribe').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const formationCard = this.closest('.formation-item');
+                const formationTitle = formationCard.querySelector('.formation-title').textContent;
+                const modalTitle = document.getElementById('inscriptionModalLabel');
+                modalTitle.innerHTML = `<i class="fas fa-user-plus me-2"></i>Inscription à la formation : ${formationTitle}`;
+            });
+        });
+
+        // Fonction pour afficher plus d'informations
+        document.querySelectorAll('.btn-info').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const formationCard = this.closest('.formation-item');
+                const formationTitle = formationCard.querySelector('.formation-title').textContent;
+                const sector = formationCard.dataset.sector;
+                const ville = formationCard.dataset.ville;
+                const duree = formationCard.dataset.duree;
+                const niveau = formationCard.dataset.niveau;
+                
+                let infoText = `Formation : ${formationTitle}\n`;
+                infoText += `Secteur : ${sector}\n`;
+                infoText += `Ville : ${ville}\n`;
+                infoText += `Durée : ${duree}\n`;
+                infoText += `Niveau : ${niveau}\n\n`;
+                infoText += `Pour plus d'informations détaillées, contactez-nous au +229 XX XX XX XX`;
+                
+                alert(infoText);
+            });
+        });
+
+        // Fonction de recherche avancée
+        function performAdvancedSearch() {
+            const searchTerm = document.getElementById('formationType').value.toLowerCase();
+            const selectedVille = document.getElementById('villeSelect').value;
+            const selectedSector = document.getElementById('secteurSelect').value;
+            
+            filteredFormations = allFormations.filter(formation => {
+                let matches = true;
+                
+                if (searchTerm && !formation.title.includes(searchTerm)) {
+                    matches = false;
+                }
+                
+                if (selectedVille && formation.ville !== selectedVille) {
+                    matches = false;
+                }
+                
+                if (selectedSector && formation.sector !== selectedSector) {
+                    matches = false;
+                }
+                
+                return matches;
+            });
+            
+            updateFormationDisplay();
+            updateFormationCount();
+        }
+
+        // Fonction pour réinitialiser tous les filtres
+        function resetAllFilters() {
+            // Réinitialiser les filtres
+            currentFilters = {
+                sector: '',
+                ville: '',
+                duree: '',
+                niveau: '',
+                certification: '',
+                search: ''
+            };
+            
+            // Réinitialiser les champs de recherche
+            document.getElementById('formationType').value = '';
+            document.getElementById('villeSelect').value = '';
+            document.getElementById('secteurSelect').value = '';
+            
+            // Retirer les classes actives des filtres
+            document.querySelectorAll('.filter-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Réafficher toutes les formations
+            filteredFormations = [...allFormations];
+            updateFormationDisplay();
+            updateFormationCount();
+        }
+
+        // Bouton de réinitialisation des filtres (à ajouter dans le HTML si nécessaire)
+        function addResetButton() {
+            const filtersSection = document.querySelector('.filters-section .container .row');
+            if (filtersSection && !document.getElementById('resetFilters')) {
+                const resetDiv = document.createElement('div');
+                resetDiv.className = 'col-12 text-center mt-3';
+                resetDiv.innerHTML = '<button id="resetFilters" class="btn btn-outline-secondary" onclick="resetAllFilters()"><i class="fas fa-undo me-2"></i>Réinitialiser les filtres</button>';
+                filtersSection.appendChild(resetDiv);
+            }
+        }
+
+        // Ajout d'événements pour les animations
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            addResetButton();
+        });
+
+        // Gestion des erreurs
+        window.addEventListener('error', function(e) {
+            console.error('Erreur JavaScript:', e.error);
+        });
+
+        // Fonction utilitaire pour déboguer
+        function debugFilters() {
+            console.log('Filtres actuels:', currentFilters);
+            console.log('Formations filtrées:', filteredFormations.length);
+            console.log('Total formations:', allFormations.length);
+        }
+    </script>
+</body>
+</html>

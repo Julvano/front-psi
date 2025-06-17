@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se Former pour Évoluer - Formation Continue au Bénin</title>
+    <meta name="description" content="L'importance de la formation continue pour booster sa carrière et accéder à de nouvelles opportunités au Bénin">
+    <meta name="keywords" content="formation continue, carrière, évolution professionnelle, Bénin, compétences, formation qualifiante">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+         :root {
+            --primary-color: #2c5530;
+            --secondary-color: #4a7c59;
+            --accent-color: #f4a261;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --gradient: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        
+        .hero-section {
+            background: var(--gradient);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="1" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+        
+        .card-custom {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .stats-section {
+            background: var(--light-bg);
+            padding: 80px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--accent-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border: 4px solid white;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-custom {
+            background: var(--gradient);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
+            color: white;
+        }
+        
+        .infographic {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin: 30px 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent-color);
+            line-height: 1;
+        }
+        
+        .footer-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 30px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: var(--primary-color);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-graduation-cap me-2"></i>Formation Continue Bénin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dispositifs">Dispositifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefices">Bénéfices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#secteurs">Secteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conseils">Conseils</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Se Former pour Évoluer</h1>
+                    <p class="lead mb-4">L'importance de la formation continue pour booster sa carrière et accéder à de nouvelles opportunités au Bénin</p>
+                    <p class="fs-5 mb-5">Dans un monde professionnel en constante mutation, la formation continue devient le levier indispensable pour rester compétitif, s'adapter aux évolutions technologiques et saisir les opportunités de carrière qui se présentent.</p>
+                    <a href="#dispositifs" class="btn btn-custom btn-lg me-3"><i class="fas fa-arrow-down me-2"></i>Découvrir</a>
+                    <a href="#guide-pdf" class="btn btn-outline-light btn-lg"><i class="fas fa-download me-2"></i>Guide PDF</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="hero-illustration">
+                        <i class="fas fa-chart-line" style="font-size: 12rem; opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="75">0</div>
+                        <p class="text-muted">% d'amélioration des perspectives d'emploi</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="45">0</div>
+                        <p class="text-muted">% d'augmentation salariale moyenne</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="250">0</div>
+                        <p class="text-muted">Formations disponibles</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="12000">0</div>
+                        <p class="text-muted">Bénéficiaires par an</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dispositifs Section -->
+    <section id="dispositifs" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">La Formation Continue au Bénin : Cadre et Dispositifs</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">Le Bénin a mis en place une politique nationale ambitieuse de formation professionnelle continue, structurée autour d'institutions clés et de partenariats stratégiques pour répondre aux besoins du marché de l'emploi.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h5 class="card-title">FODEFCA</h5>
+                            <p class="card-text">Le Fonds de Développement de la Formation Continue et de l'Apprentissage finance et coordonne les initiatives de formation professionnelle continue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h5 class="card-title">DGFPCS</h5>
+                            <p class="card-text">La Direction Générale de la Formation Professionnelle Continue et Spécialisée supervise et régule l'offre de formation continue.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-body text-center">
+                            <div class="icon-box">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h5 class="card-title">Partenariats ANPE-CUEP</h5>
+                            <p class="card-text">Collaboration entre l'Agence Nationale Pour l'Emploi et les centres universitaires pour des formations qualifiantes adaptées.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schéma des acteurs -->
+            <div class="infographic">
+                <h4 class="text-center mb-4"><i class="fas fa-sitemap me-2"></i>Schéma des Acteurs de la Formation Continue</h4>
+                <div class="row text-center">
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-government-building fa-2x text-primary mb-2"></i>
+                            <h6>Gouvernement</h6>
+                            <small>Politique nationale</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-money-bill-wave fa-2x text-success mb-2"></i>
+                            <h6>FODEFCA</h6>
+                            <small>Financement</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-school fa-2x text-info mb-2"></i>
+                            <h6>Centres de Formation</h6>
+                            <small>Offre pédagogique</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="p-3 bg-white rounded-3 shadow-sm">
+                            <i class="fas fa-users fa-2x text-warning mb-2"></i>
+                            <h6>Bénéficiaires</h6>
+                            <small>Travailleurs & Demandeurs d'emploi</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bénéfices Section -->
+    <section id="benefices" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Pourquoi se Former Continuellement ?</h2>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Améliorer ses Compétences</h5>
+                            </div>
+                            <p class="card-text">Développer des compétences techniques et transversales pour rester employable dans un marché du travail en évolution constante.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h5 class="card-title mb-0">S'Adapter aux Évolutions</h5>
+                            </div>
+                            <p class="card-text">Suivre les mutations sectorielles et technologiques, notamment dans le digital, l'agriculture et les énergies renouvelables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Évoluer Professionnellement</h5>
+                            </div>
+                            <p class="card-text">Accéder à des postes à responsabilités, obtenir des promotions et augmenter son niveau de rémunération.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h5 class="card-title mb-0">Changer de Métier</h5>
+                            </div>
+                            <p class="card-text">Se reconvertir dans un nouveau secteur d'activité et saisir les opportunités émergentes du marché béninois.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infographie des bénéfices -->
+            <div class="infographic">
+                <h4 class="text-center mb-4"><i class="fas fa-chart-pie me-2"></i>Impact de la Formation Continue sur la Carrière</h4>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="position-relative d-inline-block">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 120px; height: 120px; margin: 0 auto;">
+                                <div>
+                                    <div class="h3 mb-0">85%</div>
+                                    <small>Employabilité</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="position-relative d-inline-block">
+                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 120px; height: 120px; margin: 0 auto;">
+                                <div>
+                                    <div class="h3 mb-0">65%</div>
+                                    <small>Promotion</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="position-relative d-inline-block">
+                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center text-white" style="width: 120px; height: 120px; margin: 0 auto;">
+                                <div>
+                                    <div class="h3 mb-0">40%</div>
+                                    <small>Reconversion</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteurs Section -->
+    <section id="secteurs" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Les Formations Accessibles et les Secteurs Porteurs</h2>
+
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">Le Bénin offre une large gamme de formations dans des secteurs en forte croissance, adaptées aux besoins du marché local et aux évolutions technologiques.</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-seedling me-2 text-success"></i>Agriculture & Agroalimentaire</h5>
+                        <p>Techniques agricoles modernes, transformation agroalimentaire, agriculture biologique, gestion des coopératives agricoles.</p>
+                        <small class="text-muted">Formations de 3 à 12 mois</small>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-laptop-code me-2 text-primary"></i>Numérique & Technologies</h5>
+                        <p>Développement web, marketing digital, cybersécurité, maintenance informatique, e-commerce.</p>
+                        <small class="text-muted">Formations certifiantes 6-18 mois</small>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-hammer me-2 text-warning"></i>Artisanat & Métiers</h5>
+                        <p>Menuiserie, couture, coiffure, mécanique auto, électricité, plomberie, maçonnerie.</p>
+                        <small class="text-muted">Apprentissage en alternance</small>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-building me-2 text-info"></i>BTP & Construction</h5>
+                        <p>Techniques de construction, gestion de chantier, énergies renouvelables, architecture durable.</p>
+                        <small class="text-muted">Formations techniques 6-24 mois</small>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h5><i class="fas fa-handshake me-2 text-secondary"></i>Services & Commerce</h5>
+                        <p>Gestion d'entreprise, comptabilité, tourisme, hôtellerie, transport, logistique.</p>
+                        <small class="text-muted">Formations modulaires flexibles</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vidéo explicative -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-play-circle me-2"></i>Vidéo : La Formation Continue au Bénin</h5>
+                            <div class="video-container">
+                                <div class="d-flex align-items-center justify-content-center h-100 bg-light rounded">
+                                    <div class="text-center">
+                                        <i class="fas fa-video fa-3x text-muted mb-3"></i>
+                                        <p class="text-muted">Vidéo explicative sur les dispositifs de formation continue</p>
+                                        <button class="btn btn-custom">
+                                            <i class="fas fa-external-link-alt me-2"></i>Voir la vidéo
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financement Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Financement et Accompagnement</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h5 class="card-title">Financement Public</h5>
+                            <p class="card-text">Bourses et subventions gouvernementales pour les formations prioritaires et les demandeurs d'emploi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <h5 class="card-title">Facilités de Paiement</h5>
+                            <p class="card-text">Échelonnement des frais de formation et partenariats avec les institutions financières.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-custom text-center">
+                        <div class="card-body">
+                            <div class="icon-box">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h5 class="card-title">Accompagnement Personnalisé</h5>
+                            <p class="card-text">Conseils d'orientation, suivi pédagogique et aide à l'insertion professionnelle post-formation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

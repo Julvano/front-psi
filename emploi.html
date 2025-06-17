@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres d'Emploi - PRO SERVICE INTERNATIONAL</title>
+    <meta name="description" content="Découvrez nos offres d'emploi au Bénin. PRO SERVICE INTERNATIONAL vous accompagne dans votre recherche d'emploi dans les secteurs BTP, industrie, commerce et services.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo-psi.jpg" alt="PSI Logo" class="navbar-logo">
+                <span class="brand-text">PSI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active-nav" href="./emploi.html">Recrutements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-banner2 emploi-banner">
+        <div class="container">
+            <div class="hero-content2">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Offres d'Emploi</h1>
+                    <p class="hero-subtitle">Trouvez votre prochain défi professionnel avec PRO SERVICE INTERNATIONAL</p>
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Emploi</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Details Modal -->
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Sidebar -->
+                <div class="col-lg-3">
+                    <div class="filters-sidebar">
+                        <div class="results-count">
+                            <span id="jobCount">12</span> offres trouvées
+                        </div>
+
+                        <!-- Sector Filter -->
+                        <div class="filter-group">
+                            <h6 class="filter-title">Secteur d'activité</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="btp" id="filter-btp">
+                                <label class="form-check-label" for="filter-btp">BTP & Génie Civil (4)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="industrie" id="filter-industrie">
+                                <label class="form-check-label" for="filter-industrie">Industrie & Production (3)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="services" id="filter-services">
+                                <label class="form-check-label" for="filter-services">Services RH (3)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="transport" id="filter-transport">
+                                <label class="form-check-label" for="filter-transport">Transport (2)</label>
+                            </div>
+                        </div>
+
+                        <!-- Contract Type Filter -->
+                        <div class="filter-group">
+                            <h6 class="filter-title">Type de contrat</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cdi" id="filter-cdi">
+                                <label class="form-check-label" for="filter-cdi">CDI (8)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="cdd" id="filter-cdd">
+                                <label class="form-check-label" for="filter-cdd">CDD (3)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="freelance" id="filter-freelance">
+                                <label class="form-check-label" for="filter-freelance">Freelance (1)</label>
+                            </div>
+                        </div>
+
+                        <!-- Salary Filter -->
+                        <div class="filter-group">
+                            <h6 class="filter-title">Niveau de salaire</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="entry" id="filter-entry">
+                                <label class="form-check-label" for="filter-entry">150k - 300k FCFA</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="mid" id="filter-mid">
+                                <label class="form-check-label" for="filter-mid">300k - 500k FCFA</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="senior" id="filter-senior">
+                                <label class="form-check-label" for="filter-senior">500k+ FCFA</label>
+                            </div>
+                        </div>
+
+                        <!-- Date Filter -->
+                        <div class="filter-group">
+                            <h6 class="filter-title">Date de publication</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="today" id="filter-today">
+                                <label class="form-check-label" for="filter-today">Aujourd'hui</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="week" id="filter-week">
+                                <label class="form-check-label" for="filter-week">Cette semaine</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="month" id="filter-month">
+                                <label class="form-check-label" for="filter-month">Ce mois</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Listings -->
+                <div class="col-lg-9">
+                    <div id="jobListings">
+                        <!-- Job Card 1 -->
+                        <div class="job-card fade-in-up" data-sector="btp" data-contract="cdi" data-location="cotonou" data-salary="mid">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Conducteur d'Engins</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-truck-moving fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdi">CDI</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>400k - 500k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 2 jours</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Nous recherchons un conducteur d'engins expérimenté pour nos chantiers de construction. Vous serez responsable de la conduite de pelleteuses, bulldozers et autres engins de chantier en respectant les consignes de sécurité.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">Pelleteuse</span>
+                                <span class="job-tag">Bulldozer</span>
+                                <span class="job-tag">Sécurité</span>
+                                <span class="job-tag">BTP</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(1)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 2 -->
+                        <div class="job-card fade-in-up" data-sector="btp" data-contract="cdi" data-location="porto-novo" data-salary="senior">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Ingénieur Génie Civil</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-hard-hat fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Porto-Novo</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdi">CDI</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>600k - 800k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 1 jour</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Poste d'ingénieur génie civil pour la supervision de projets d'infrastructure. Vous piloterez les études techniques, coordonnerez les équipes et assurerez le suivi qualité des travaux de construction.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">AutoCAD</span>
+                                <span class="job-tag">Gestion de projet</span>
+                                <span class="job-tag">Supervision</span>
+                                <span class="job-tag">Infrastructure</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(2)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply" onclick="applyToJob(2)">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 3 -->
+                        <div class="job-card fade-in-up" data-sector="btp" data-contract="cdd" data-location="parakou" data-salary="mid">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Chef de Chantier</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-users-cog fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Parakou</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdd">CDD</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>450k - 550k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 3 jours</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Mission de 12 mois pour diriger une équipe de construction sur un projet d'infrastructure routière. Expérience en management d'équipe et connaissance des normes de construction requises.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">Management</span>
+                                <span class="job-tag">Planification</span>
+                                <span class="job-tag">Sécurité</span>
+                                <span class="job-tag">Route</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(3)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply" onclick="applyToJob(3)">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 4 -->
+                        <div class="job-card fade-in-up" data-sector="btp" data-contract="cdi" data-location="abomey" data-salary="entry">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Maçon Qualifié</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-hammer fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Abomey</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdi">CDI</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>250k - 350k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 5 jours</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Recherchons maçon expérimenté pour travaux de construction résidentielle et commerciale. Maîtrise des techniques de maçonnerie traditionnelle et moderne exigée.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">Maçonnerie</span>
+                                <span class="job-tag">Construction</span>
+                                <span class="job-tag">Finition</span>
+                                <span class="job-tag">Résidentiel</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(4)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply" onclick="applyToJob(4)">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 5 -->
+                        <div class="job-card fade-in-up" data-sector="industrie" data-contract="cdi" data-location="cotonou" data-salary="mid">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Technicien de Maintenance</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-tools fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cotonou</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdi">CDI</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>350k - 450k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 1 semaine</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Poste de technicien de maintenance industrielle pour assurer la maintenance préventive et curative des équipements. Formation en électromécanique ou mécanique industrielle souhaitée.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">Maintenance</span>
+                                <span class="job-tag">Électromécanique</span>
+                                <span class="job-tag">Préventif</span>
+                                <span class="job-tag">Industrie</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(5)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply" onclick="applyToJob(5)">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Job Card 6 -->
+                        <div class="job-card fade-in-up" data-sector="industrie" data-contract="cdd" data-location="bohicon" data-salary="entry">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h3 class="job-title">Opérateur de Production</h3>
+                                    <p class="job-company">PRO SERVICE INTERNATIONAL</p>
+                                </div>
+                                <i class="fas fa-industry fa-2x" style="color: var(--accent-green);"></i>
+                            </div>
+
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Bohicon</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <span class="contract-badge badge-cdd">CDD</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>200k - 280k FCFA</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Il y a 4 jours</span>
+                                </div>
+                            </div>
+
+                            <p class="job-description">
+                                Contrat de 6 mois renouvelable pour opérateur sur ligne de production agroalimentaire. Formation sur site assurée. Aptitude au travail en équipe et respect des normes d'hygiène requis.
+                            </p>
+
+                            <div class="job-tags">
+                                <span class="job-tag">Production</span>
+                                <span class="job-tag">Agroalimentaire</span>
+                                <span class="job-tag">Hygiène</span>
+                                <span class="job-tag">Équipe</span>
+                            </div>
+
+                            <div class="job-actions">
+                                <button class="btn btn-details" onclick="showJobDetails(6)">
+                                    <i class="fas fa-eye"></i> Voir détails
+                                </button>
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply" onclick="applyToJob(6)">
+                                    <i class="fas fa-paper-plane"></i> Postuler
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-4">
+                        <button class="btn btn-search" id="loadMoreBtn" onclick="loadMoreJobs()">
+                            <i class="fas fa-plus"></i> Charger plus d'offres
+                        </button>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Job pagination" class="mt-4">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" style="color: var(--primary-blue); font-weight: 700;">Pourquoi Nous Choisir ?</h2>
+                <p class="section-subtitle" style="color: var(--text-muted); font-size: 1.1rem;">PRO SERVICE INTERNATIONAL, votre partenaire emploi de confiance</p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Placements Réussis</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Entreprises Partenaires</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Taux de Satisfaction</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Années d'Expérience</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tip-card text-center">
+                        <div class="tip-icon mx-auto">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted);">
+                            "Grâce à PRO SERVICE INTERNATIONAL, j'ai trouvé un poste d'ingénieur qui correspond parfaitement à mes compétences. Un accompagnement professionnel du début à la fin."
+                        </p>
+                        <h6 style="color: var(--primary-blue); font-weight: 600;">- Jean-Baptiste K.</h6>
+                        <small style="color: var(--text-muted);">Ingénieur Génie Civil</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tip-card text-center">
+                        <div class="tip-icon mx-auto">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted);">
+                            "L'équipe m'a accompagnée dans ma recherche d'emploi avec beaucoup de professionnalisme. Aujourd'hui, je travaille dans une entreprise qui me valorise."
+                        </p>
+                        <h6 style="color: var(--primary-blue); font-weight: 600;">- Marie-Claire A.</h6>
+                        <small style="color: var(--text-muted);">Responsable RH</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tip-card text-center">
+                        <div class="tip-icon mx-auto">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted);">
+                            "Une approche personnalisée et des offres d'emploi de qualité. PRO SERVICE INTERNATIONAL comprend vraiment les besoins du marché béninois."
+                        </p>
+                        <h6 style="color: var(--primary-blue); font-weight: 600;">- Rodrigue T.</h6>
+                        <small style="color: var(--text-muted);">Chef de Chantier</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Tips Section -->
+    <section class="career-tips-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" style="color: var(--primary-blue); font-weight: 700;">Conseils Carrière</h2>
+                <p class="section-subtitle" style="color: var(--text-muted); font-size: 1.1rem;">Nos experts vous guident vers le succès professionnel</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5 style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem;">Rédiger un CV Efficace</h5>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Découvrez comment structurer votre CV pour attirer l'attention des recruteurs et mettre en valeur vos compétences clés.
+                        </p>
+                        <a href="./apports/rediger-cv.html" target="_blank" class="btn btn-details">Lire l'article</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem;">Préparer son Entretien</h5>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Les techniques pour réussir votre entretien d'embauche et faire bonne impression dès les premiers instants.
+                        </p>
+                        <a href="./apports/preparer-entretient.html" target="_blank" class="btn btn-details">Lire l'article</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem;">Secteurs qui Recrutent</h5>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Analyse du marché de l'emploi au Bénin : quels sont les secteurs porteurs et les opportunités à saisir.
+                        </p>
+                        <a href="./apports/secteur-recrutement.html" target="_blank" class="btn btn-details">Lire l'article</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5 style="color: var(--primary-blue); font-weight: 600; margin-bottom: 1rem;">Se Former pour Évoluer</h5>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            L'importance de la formation continue pour booster sa carrière et accéder à de nouvelles opportunités.
+                        </p>
+                        <a href="./apports/importance-former.html" target="_blank" class="btn btn-details">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="cta-card text-center">
+                        <h2 style="font-weight: 700; margin-bottom: 1.5rem;">Vous Ne Trouvez Pas Votre Poste Idéal ?</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
+                            Déposez une candidature spontanée et laissez-nous vous accompagner dans votre recherche d'emploi. Notre équipe d'experts vous contactera dès qu'une opportunité correspondant à votre profil se présente.
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <a href="./recrutement.html">
+                                    <button class="btn btn-apply w-100" onclick="showSpontaneousApplication()">
+                                    <i class="fas fa-upload"></i> Candidature Spontanée
+                                </button>
+                                </a>
+
+                            </div>
+                            <div class="col-md-6">
+                                <a href="./contact.html">
+                                    <button class="btn btn-details w-100" style="background: rgba(255,255,255,0.2); border-color: white; color: white;" onclick="showContactForm()">
+                                    <i class="fas fa-phone"></i> Nous Contacter
+                                </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p style="margin-bottom: 0; opacity: 0.8;">
+                                <i class="fas fa-star"></i> Découvrez aussi nos <a href="#formation" style="color: var(--accent-green); text-decoration: underline;">programmes de formation professionnelle</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>PRO SERVICE INTERNATIONAL</h5>
+                    <p>Votre partenaire de confiance pour les services RH & BTP en Afrique. Excellence, Innovation, Partenariat.</p>
+                    <div class="social-links-footer">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">BTP</a></li>
+                        <li><a href="#">Importation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Formations</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">BTP & Construction</a></li>
+                        <li><a href="#">Industrie</a></li>
+                        <li><a href="#">Transport</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Cotonou, Bénin</p>
+                    <p><i class="fas fa-phone me-2"></i>+229 XX XX XX XX</p>
+                    <p><i class="fas fa-envelope me-2"></i>contact@psibenin.com</p>
+                </div>
+            </div>
+            <hr style="border-color: #ffffff33;">
+            <div class="text-center">
+                <p>&copy; 2024 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/22912345678" class="whatsapp-btn" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
