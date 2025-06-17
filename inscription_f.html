@@ -6,390 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription aux Formations - PRO SERVICE INTERNATIONAL</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5.3.0 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6.4.0 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-         :root {
-            --primary-blue: #1e3a8a;
-            --accent-green: #10b981;
-            --white: #ffffff;
-            --light-gray: #f8fafc;
-            --dark-gray: #374151;
-            --border-color: #e5e7eb;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--light-gray);
-        }
-        /* Navigation */
-        
-        .navbar {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1rem 0;
-        }
-        
-        .navbar-brand img {
-            height: 50px;
-        }
-        
-        .navbar-nav .nav-link {
-            color: var(--dark-gray);
-            font-weight: 500;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: var(--accent-green);
-        }
-        /* Hero Section */
-        
-        .hero-banner2 {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #2563eb 100%);
-            color: var(--white);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-banner2::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .breadcrumb {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .breadcrumb a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            color: var(--white);
-        }
-        /* Cards */
-        
-        .card-custom {
-            background: var(--white);
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 30px;
-        }
-        
-        .card-custom:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        /* Form Styles */
-        
-        .form-section {
-            padding: 40px;
-        }
-        
-        .form-section h4 {
-            color: var(--primary-blue);
-            margin-bottom: 25px;
-            font-weight: 600;
-            border-bottom: 2px solid var(--accent-green);
-            padding-bottom: 10px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-label {
-            font-weight: 500;
-            color: var(--dark-gray);
-            margin-bottom: 8px;
-        }
-        
-        .required {
-            color: #dc3545;
-        }
-        
-        .form-control,
-        .form-select {
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            padding: 12px 15px;
-            font-size: 14px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        
-        .form-control:focus,
-        .form-select:focus {
-            border-color: var(--accent-green);
-            box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
-            outline: none;
-        }
-        
-        .form-check-input:checked {
-            background-color: var(--accent-green);
-            border-color: var(--accent-green);
-        }
-        /* Buttons */
-        
-        .btn-primary-custom {
-            background: var(--accent-green);
-            border: 2px solid var(--accent-green);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary-custom:hover {
-            background: transparent;
-            color: var(--accent-green);
-            transform: translateY(-2px);
-        }
-        
-        .btn-outline-primary-custom {
-            background: transparent;
-            border: 2px solid var(--accent-green);
-            color: var(--accent-green);
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-outline-primary-custom:hover {
-            background: var(--accent-green);
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-        /* Process Steps */
-        
-        .process-step {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .process-step .step-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            color: var(--white);
-        }
-        
-        .step-number {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: var(--primary-blue);
-            color: var(--white);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        /* Pricing Table */
-        
-        .pricing-table {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        .pricing-table th {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 15px;
-            font-weight: 600;
-        }
-        
-        .pricing-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        /* Error and Success Messages */
-        
-        .error-message {
-            color: #dc3545;
-            font-size: 0.85rem;
-            margin-top: 5px;
-            display: none;
-        }
-        
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 1px solid #c3e6cb;
-            display: none;
-        }
-        /* Floating Buttons */
-        
-        .floating-buttons {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-        }
-        
-        .floating-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-        
-        .floating-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .whatsapp-btn {
-            background: #25d366;
-            color: var(--white);
-        }
-        
-        .scroll-top-btn {
-            background: var(--primary-blue);
-            color: var(--white);
-            cursor: pointer;
-        }
-        /* Footer */
-        
-        .footer {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 50px 0 20px;
-            margin-top: 80px;
-        }
-        
-        .footer h5 {
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer a:hover {
-            color: var(--white);
-        }
-        /* Animations */
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Responsive */
-        
-        @media (max-width: 768px) {
-            .hero-banner2 {
-                padding: 60px 0;
-            }
-            .form-section {
-                padding: 20px;
-            }
-            .floating-buttons {
-                bottom: 20px;
-                right: 20px;
-            }
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <!-- Navigation -->
+
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="https://via.placeholder.com/150x50/1e3a8a/ffffff?text=PSI" alt="PSI Logo">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logo-psi.jpg" alt="PSI Logo" class="navbar-logo">
+                <span class="brand-text">PSI</span>
             </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home"><i class="fas fa-home"></i> Accueil</a>
+                        <a class="nav-link" href="./index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="fas fa-info-circle"></i> À propos</a>
+                        <a class="nav-link" href="./about.html">À Propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#formations"><i class="fas fa-graduation-cap"></i> Formations</a>
+                        <a class="nav-link" href="./service.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services"><i class="fas fa-cogs"></i> Services</a>
+                        <a class="nav-link" href="./emploi.html">Recrutements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                        <a class="nav-link active-nav" href="./formation2.html">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -397,608 +55,429 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-banner2">
+    <section class="hero-banner2 inscrire-formation-banner">
         <div class="container">
-            <div class="hero-content text-center">
+            <div class="hero-content2">
+                <h1 class="hero-title">Inscription à une Formation</h1>
+                <p class="hero-subtitle">Rejoignez PRO SERVICE INTERNATIONAL et développez vos compétences professionnelles</p>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="#home">Accueil</a></li>
-                        <li class="breadcrumb-item"><a href="#formations">Formations</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Inscription</li>
+                        <li class="breadcrumb-item"><a href="./index.html">Accueil</a></li>
+                        <li class="breadcrumb-item"><a href="./formation2.html">Formations</a></li>
+                        <li class="breadcrumb-item active">Inscription</li>
                     </ol>
                 </nav>
-                <h1 class="display-4 fw-bold mb-3">Inscription aux Formations</h1>
-                <p class="lead">Rejoignez nos programmes de formation professionnelle et développez vos compétences avec PSI</p>
             </div>
-        </div>
     </section>
 
-    <!-- Process Steps -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--primary-blue);">Processus d'Inscription</h2>
+
+    <div class="container my-5">
+        <!-- Informations sur l'offre -->
+        <div class="job-info-card">
+            <h3 class="mb-4"><i class="fas fa-briefcase me-2"></i>Détails de la formation</h3>
             <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="process-step position-relative">
-                        <div class="step-icon position-relative">
-                            <i class="fas fa-edit"></i>
-                            <span class="step-number">1</span>
-                        </div>
-                        <h5>Remplir le formulaire</h5>
-                        <p>Complétez toutes les informations requises dans le formulaire d'inscription</p>
+                <div class="col-md-6">
+                    <div class="job-info-item">
+                        <i class="fas fa-hashtag"></i>
+                        <div><strong>Référence:</strong> REF-2024-001</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div><strong>Poste:</strong> Conducteur d'Engins</div>
+                    </div>
+                    <div class="job-info-item">
+                        <i class="fas fa-industry"></i>
+                        <div><strong>Secteur:</strong> BTP - Travaux Publics</div>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in">
-                    <div class="process-step position-relative">
-                        <div class="step-icon position-relative">
-                            <i class="fas fa-upload"></i>
-                            <span class="step-number">2</span>
-                        </div>
-                        <h5>Soumettre les documents</h5>
-                        <p>Envoyez tous les documents requis selon votre formation choisie</p>
+                <div class="col-md-6">
+                    <div class="job-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><strong>Localisation:</strong> Cotonou, Bénin</div>
                     </div>
-                </div>
-                <div class="col-md-4 fade-in">
-                    <div class="process-step position-relative">
-                        <div class="step-icon position-relative">
-                            <i class="fas fa-check-circle"></i>
-                            <span class="step-number">3</span>
-                        </div>
-                        <h5>Confirmation et paiement</h5>
-                        <p>Recevez votre confirmation et procédez au paiement pour valider votre inscription</p>
+                    <div class="job-info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div><strong>Date limite:</strong> 15 Juillet 2025</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Registration Form -->
-    <section class="py-5">
-        <div class="container">
-            <div class="card-custom fade-in">
-                <div class="form-section">
-                    <h2 class="text-center mb-5" style="color: var(--primary-blue);">Formulaire d'Inscription</h2>
+        <!-- Formulaire d'inscription -->
+        <section class="section-padding-iform">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card">
+                            <div class="card-body p-5">
+                                <div class="form-progress mb-4">
+                                    <div class="form-progress-bar" id="progressBar"></div>
+                                </div>
 
-                    <div class="success-message" id="successMessage">
-                        <i class="fas fa-check-circle"></i> Votre inscription a été soumise avec succès ! Nous vous contactons sous 24h.
-                    </div>
-
-                    <form id="registrationForm">
-                        <!-- Informations Personnelles -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-user"></i> Informations Personnelles</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Nom <span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="nom" name="nom" required>
-                                    <div class="error-message" id="nom-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Prénom <span class="required">*</span></label>
-                                    <input type="text" class="form-control" id="prenom" name="prenom" required>
-                                    <div class="error-message" id="prenom-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Date de naissance <span class="required">*</span></label>
-                                    <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" required>
-                                    <div class="error-message" id="dateNaissance-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Lieu de naissance</label>
-                                    <input type="text" class="form-control" id="lieuNaissance" name="lieuNaissance">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Nationalité</label>
-                                    <select class="form-select" id="nationalite" name="nationalite">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="beninoise">Béninoise</option>
-                                        <option value="togolaise">Togolaise</option>
-                                        <option value="nigeriane">Nigériane</option>
-                                        <option value="ivoirienne">Ivoirienne</option>
-                                        <option value="senegalaise">Sénégalaise</option>
-                                        <option value="burkinabe">Burkinabé</option>
-                                        <option value="malienne">Malienne</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Sexe</label>
-                                    <div class="mt-2">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="sexe" id="masculin" value="masculin">
-                                            <label class="form-check-label" for="masculin">Masculin</label>
+                                <form id="inscriptionForm" novalidate>
+                                    <!-- Informations personnelles -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-user me-2"></i>Informations personnelles</h3>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="sexe" id="feminin" value="feminin">
-                                            <label class="form-check-label" for="feminin">Féminin</label>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nom" class="form-label required">Nom</label>
+                                            <input type="text" class="form-control" id="nom" name="nom" required>
+                                            <div class="invalid-feedback">Veuillez saisir votre nom.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="prenom" class="form-label required">Prénom</label>
+                                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                                            <div class="invalid-feedback">Veuillez saisir votre prénom.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="dateNaissance" class="form-label required">Date de naissance</label>
+                                            <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" required>
+                                            <div class="invalid-feedback">Veuillez saisir votre date de naissance.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lieuNaissance" class="form-label required">Lieu de naissance</label>
+                                            <input type="text" class="form-control" id="lieuNaissance" name="lieuNaissance" required>
+                                            <div class="invalid-feedback">Veuillez saisir votre lieu de naissance.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="sexe" class="form-label required">Sexe</label>
+                                            <select class="form-select" id="sexe" name="sexe" required>
+                                            <option value="">Sélectionner...</option>
+                                            <option value="M">Masculin</option>
+                                            <option value="F">Féminin</option>
+                                        </select>
+                                            <div class="invalid-feedback">Veuillez sélectionner votre sexe.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="situationMatrimoniale" class="form-label required">Situation matrimoniale</label>
+                                            <select class="form-select" id="situationMatrimoniale" name="situationMatrimoniale" required>
+                                            <option value="">Sélectionner...</option>
+                                            <option value="celibataire">Célibataire</option>
+                                            <option value="marie">Marié(e)</option>
+                                            <option value="divorce">Divorcé(e)</option>
+                                            <option value="veuf">Veuf/Veuve</option>
+                                        </select>
+                                            <div class="invalid-feedback">Veuillez sélectionner votre situation matrimoniale.</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label class="form-label">Situation matrimoniale</label>
-                                    <select class="form-select" id="situationMatrimoniale" name="situationMatrimoniale">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="celibataire">Célibataire</option>
-                                        <option value="marie">Marié(e)</option>
-                                        <option value="divorce">Divorcé(e)</option>
-                                        <option value="veuf">Veuf/Veuve</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Contact -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-phone"></i> Informations de Contact</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Téléphone principal <span class="required">*</span></label>
-                                    <input type="tel" class="form-control" id="telephone" name="telephone" required>
-                                    <div class="error-message" id="telephone-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Téléphone secondaire</label>
-                                    <input type="tel" class="form-control" id="telephoneSecondaire" name="telephoneSecondaire">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Email <span class="required">*</span></label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                    <div class="error-message" id="email-error">Veuillez saisir un email valide</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Ville <span class="required">*</span></label>
-                                    <select class="form-select" id="ville" name="ville" required>
-                                        <option value="">Sélectionner...</option>
-                                        <option value="cotonou">Cotonou</option>
-                                        <option value="porto-novo">Porto-Novo</option>
-                                        <option value="parakou">Parakou</option>
-                                        <option value="abomey">Abomey</option>
-                                        <option value="natitingou">Natitingou</option>
-                                        <option value="kandi">Kandi</option>
-                                        <option value="ouidah">Ouidah</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                    <div class="error-message" id="ville-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label">Adresse complète <span class="required">*</span></label>
-                                    <textarea class="form-control" id="adresse" name="adresse" rows="3" required></textarea>
-                                    <div class="error-message" id="adresse-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Formation Souhaitée -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-graduation-cap"></i> Formation Souhaitée</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Type de formation <span class="required">*</span></label>
-                                    <select class="form-select" id="typeFormation" name="typeFormation" required>
-                                        <option value="">Sélectionner...</option>
-                                        <option value="btp">BTP & Construction</option>
-                                        <option value="industrie">Industrie</option>
-                                        <option value="transport">Transport & Logistique</option>
-                                        <option value="services">Services</option>
-                                        <option value="securite">Sécurité</option>
-                                    </select>
-                                    <div class="error-message" id="typeFormation-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Formation spécifique <span class="required">*</span></label>
-                                    <select class="form-select" id="formationSpecifique" name="formationSpecifique" required disabled>
-                                        <option value="">Choisir d'abord le type...</option>
-                                    </select>
-                                    <div class="error-message" id="formationSpecifique-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Session préférée <span class="required">*</span></label>
-                                    <select class="form-select" id="session" name="session" required>
-                                        <option value="">Sélectionner...</option>
-                                        <option value="juillet-2025">Juillet 2025</option>
-                                        <option value="septembre-2025">Septembre 2025</option>
-                                        <option value="novembre-2025">Novembre 2025</option>
-                                        <option value="janvier-2026">Janvier 2026</option>
-                                    </select>
-                                    <div class="error-message" id="session-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Mode de formation</label>
-                                    <select class="form-select" id="modeFormation" name="modeFormation">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="presentiel">Présentiel</option>
-                                        <option value="distance">À distance</option>
-                                        <option value="mixte">Mixte</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Niveau et Expérience -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-chart-line"></i> Niveau et Expérience</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Niveau d'études</label>
-                                    <select class="form-select" id="niveauEtudes" name="niveauEtudes">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="sans-diplome">Sans diplôme</option>
-                                        <option value="bepc">BEPC</option>
-                                        <option value="bac">BAC</option>
-                                        <option value="bac2">BAC+2</option>
-                                        <option value="bac3">BAC+3</option>
-                                        <option value="bac5">BAC+5 et plus</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Expérience professionnelle</label>
-                                    <select class="form-select" id="experience" name="experience">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="0-1">0-1 an</option>
-                                        <option value="1-3">1-3 ans</option>
-                                        <option value="3-5">3-5 ans</option>
-                                        <option value="5+">5 ans et plus</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Domaine d'expérience</label>
-                                    <input type="text" class="form-control" id="domaineExperience" name="domaineExperience">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Statut actuel</label>
-                                    <select class="form-select" id="statutActuel" name="statutActuel">
-                                        <option value="">Sélectionner...</option>
-                                        <option value="etudiant">Étudiant</option>
-                                        <option value="employe">Employé</option>
-                                        <option value="demandeur">Demandeur d'emploi</option>
-                                        <option value="entrepreneur">Entrepreneur</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label">Motivation pour cette formation <span class="required">*</span></label>
-                                    <textarea class="form-control" id="motivation" name="motivation" rows="4" required></textarea>
-                                    <div class="error-message" id="motivation-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Financement -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-credit-card"></i> Financement</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Mode de financement <span class="required">*</span></label>
-                                    <select class="form-select" id="financement" name="financement" required>
-                                        <option value="">Sélectionner...</option>
-                                        <option value="personnel">Personnel</option>
-                                        <option value="employeur">Employeur</option>
-                                        <option value="bourse">Bourse</option>
-                                        <option value="autre">Autre</option>
-                                    </select>
-                                    <div class="error-message" id="financement-error">Ce champ est obligatoire</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Employeur actuel</label>
-                                    <input type="text" class="form-control" id="employeur" name="employeur">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="paiementEchelonne" name="paiementEchelonne">
-                                        <label class="form-check-label" for="paiementEchelonne">
-                                            Je souhaite un paiement échelonné
-                                        </label>
+                                    <!-- Contact -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-phone me-2"></i>Contact</h3>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="telephone" class="form-label required">Téléphone</label>
+                                            <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                                            <div class="invalid-feedback">Veuillez saisir un numéro de téléphone valide.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label required">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                            <div class="invalid-feedback">Veuillez saisir une adresse email valide.</div>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="adresse" class="form-label required">Adresse complète</label>
+                                            <textarea class="form-control" id="adresse" name="adresse" rows="3" required></textarea>
+                                            <div class="invalid-feedback">Veuillez saisir votre adresse complète.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="ville" class="form-label required">Ville</label>
+                                            <input type="text" class="form-control" id="ville" name="ville" required>
+                                            <div class="invalid-feedback">Veuillez saisir votre ville.</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Documents Requis -->
-                        <div class="row">
-                            <div class="col-12">
-                                <h4><i class="fas fa-file-alt"></i> Documents à Fournir</h4>
-                                <div class="alert alert-info">
-                                    <i class="fas fa-info-circle"></i> Veuillez cocher les documents que vous êtes prêt à fournir :
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="pieceIdentite" name="documents[]" value="piece_identite" required>
-                                    <label class="form-check-label" for="pieceIdentite">
-                                        <i class="fas fa-id-card text-primary"></i> Copie de la pièce d'identité <span class="required">*</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="cv" name="documents[]" value="cv" required>
-                                    <label class="form-check-label" for="cv">
-                                        <i class="fas fa-file-text text-primary"></i> CV actualisé <span class="required">*</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="diplome" name="documents[]" value="diplome">
-                                    <label class="form-check-label" for="diplome">
-                                        <i class="fas fa-certificate text-primary"></i> Copie du dernier diplôme
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="photo" name="documents[]" value="photo" required>
-                                    <label class="form-check-label" for="photo">
-                                        <i class="fas fa-camera text-primary"></i> Photo d'identité récente <span class="required">*</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="attestationTravail" name="documents[]" value="attestation_travail">
-                                    <label class="form-check-label" for="attestationTravail">
-                                        <i class="fas fa-briefcase text-primary"></i> Attestation de travail (si applicable)
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="lettreMotivation" name="documents[]" value="lettre_motivation">
-                                    <label class="form-check-label" for="lettreMotivation">
-                                        <i class="fas fa-envelope text-primary"></i> Lettre de motivation (si applicable)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="error-message" id="documents-error">Veuillez cocher au moins les documents obligatoires</div>
-                            </div>
-                        </div>
 
-                        <!-- Frais Calculés -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card" style="background: var(--light-gray); border: 2px solid var(--accent-green);">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="color: var(--primary-blue);">
-                                            <i class="fas fa-calculator"></i> Estimation des Frais
-                                        </h5>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p><strong>Formation sélectionnée :</strong> <span id="formationDisplay">-</span></p>
-                                                <p><strong>Durée :</strong> <span id="dureeDisplay">-</span></p>
+
+                                    <!-- Niveau d'études -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-book me-2"></i>Niveau d'études</h3>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="niveauEtudes" class="form-label required">Votre niveau d'études actuel</label>
+                                            <select class="form-select" id="niveauEtudes" name="niveauEtudes" required>
+                                            <option value="">Sélectionner...</option>
+                                            <option value="sans-diplome">Sans diplôme</option>
+                                            <option value="bepc">BEPC</option>
+                                            <option value="bac">BAC</option>
+                                            <option value="licence">Licence</option>
+                                            <option value="master">Master</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
+                                            <div class="invalid-feedback">Veuillez sélectionner votre niveau d'études.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3" id="autreNiveauDiv" style="display: none;">
+                                            <label for="autreNiveau" class="form-label">Précisez votre niveau</label>
+                                            <input type="text" class="form-control" id="autreNiveau" name="autreNiveau">
+                                        </div>
+                                    </div>
+
+                                    <!-- Expérience professionnelle -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-briefcase me-2"></i>Expérience professionnelle</h3>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label required">Avez-vous une expérience professionnelle ?</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="experiencePro" id="experienceOui" value="oui">
+                                                <label class="form-check-label" for="experienceOui">Oui</label>
                                             </div>
-                                            <div class="col-md-6">
-                                                <p><strong>Frais de formation :</strong> <span id="fraisDisplay" style="color: var(--accent-green); font-weight: bold;">-</span></p>
-                                                <p><strong>Frais d'inscription :</strong> <span style="color: var(--accent-green); font-weight: bold;">25,000 FCFA</span></p>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="experiencePro" id="experienceNon" value="non">
+                                                <label class="form-check-label" for="experienceNon">Non</label>
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="text-center">
-                                            <h4 style="color: var(--primary-blue);">Total estimé : <span id="totalDisplay" style="color: var(--accent-green);">25,000 FCFA</span></h4>
+                                        <div class="col-12 mb-3" id="detailExperienceDiv" style="display: none;">
+                                            <label for="detailExperience" class="form-label">Décrivez votre expérience professionnelle</label>
+                                            <textarea class="form-control" id="detailExperience" name="detailExperience" rows="4" placeholder="Postes occupés, durée, entreprises..."></textarea>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Boutons de soumission -->
-                        <div class="row mt-4">
-                            <div class="col-12 text-center">
-                                <button type="button" class="btn btn-outline-primary-custom me-3" id="saveFormBtn">
-                                    <i class="fas fa-save"></i> Sauvegarder le brouillon
-                                </button>
-                                <button type="submit" class="btn btn-primary-custom" id="submitBtn">
-                                    <i class="fas fa-paper-plane"></i> Soumettre l'inscription
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conditions d'Admission -->
-    <section class="py-5" style="background: var(--white);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card-custom fade-in">
-                        <div class="form-section">
-                            <h3 class="text-center mb-4" style="color: var(--primary-blue);">
-                                <i class="fas fa-clipboard-check"></i> Conditions d'Admission
-                            </h3>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h5 style="color: var(--accent-green);">Prérequis Généraux</h5>
-                                    <ul>
-                                        <li>Être âgé de 16 ans minimum</li>
-                                        <li>Avoir un niveau minimum de lecture/écriture</li>
-                                        <li>Être physiquement apte (selon la formation)</li>
-                                        <li>Fournir tous les documents requis</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5 style="color: var(--accent-green);">Prérequis Spécifiques</h5>
-                                    <ul>
-                                        <li><strong>BTP :</strong> Aptitude physique confirmée</li>
-                                        <li><strong>Transport :</strong> Permis de conduire (selon formation)</li>
-                                        <li><strong>Industrie :</strong> Notions de base en maths</li>
-                                        <li><strong>Sécurité :</strong> Casier judiciaire vierge</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tarifs et Modalités -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--primary-blue);">Tarifs et Modalités de Paiement</h2>
-            <div class="card-custom fade-in">
-                <div class="form-section">
-                    <div class="table-responsive">
-                        <table class="table pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Domaine de Formation</th>
-                                    <th>Durée</th>
-                                    <th>Frais de Formation</th>
-                                    <th>Modalités de Paiement</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>BTP & Construction</strong></td>
-                                    <td>3-6 mois</td>
-                                    <td>150,000 - 300,000 FCFA</td>
-                                    <td>3 tranches possibles</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Industrie</strong></td>
-                                    <td>2-4 mois</td>
-                                    <td>120,000 - 250,000 FCFA</td>
-                                    <td>2-3 tranches possibles</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Transport & Logistique</strong></td>
-                                    <td>1-3 mois</td>
-                                    <td>80,000 - 200,000 FCFA</td>
-                                    <td>2 tranches possibles</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Services</strong></td>
-                                    <td>1-2 mois</td>
-                                    <td>60,000 - 150,000 FCFA</td>
-                                    <td>2 tranches possibles</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Sécurité</strong></td>
-                                    <td>2-3 mois</td>
-                                    <td>100,000 - 180,000 FCFA</td>
-                                    <td>2-3 tranches possibles</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="alert alert-warning mt-4">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <strong>Note :</strong> Les frais d'inscription de 25,000 FCFA sont à régler lors de la soumission du dossier. Ce montant est déduit du coût total de la formation.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Support -->
-    <section class="py-5" style="background: var(--white);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="card-custom fade-in">
-                        <div class="form-section text-center">
-                            <h3 style="color: var(--primary-blue);">
-                                <i class="fas fa-headset"></i> Besoin d'Aide pour votre Inscription ?
-                            </h3>
-                            <p class="lead">Notre équipe est là pour vous accompagner dans votre démarche</p>
-                            <div class="row mt-4">
-                                <div class="col-md-4">
-                                    <div class="text-center p-3">
-                                        <div class="mb-3">
-                                            <i class="fas fa-phone-alt fa-2x" style="color: var(--accent-green);"></i>
+                                    <!-- Motivation -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-heart me-2"></i>Motivation</h3>
                                         </div>
-                                        <h5>Appelez-nous</h5>
-                                        <p>+229 21 12 34 56<br>+229 97 12 34 56</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="text-center p-3">
-                                        <div class="mb-3">
-                                            <i class="fas fa-envelope fa-2x" style="color: var(--accent-green);"></i>
+                                        <div class="col-12 mb-3">
+                                            <label for="motivation" class="form-label required">Pourquoi avez-vous choisi cette formation ?</label>
+                                            <textarea class="form-control" id="motivation" name="motivation" rows="5" required placeholder="Expliquez vos motivations et vos objectifs professionnels..."></textarea>
+                                            <div class="invalid-feedback">Veuillez expliquer vos motivations.</div>
                                         </div>
-                                        <h5>Écrivez-nous</h5>
-                                        <p>inscription@psi-benin.com<br>info@psi-benin.com</p>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="text-center p-3">
-                                        <div class="mb-3">
-                                            <i class="fas fa-map-marker-alt fa-2x" style="color: var(--accent-green);"></i>
+
+                                    <!-- Pièces jointes -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-paperclip me-2"></i>Pièces jointes</h3>
                                         </div>
-                                        <h5>Visitez-nous</h5>
-                                        <p>123 Avenue de la Formation<br>Cotonou, Bénin</p>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="cv" class="form-label required">CV (PDF, DOC, DOCX)</label>
+                                            <input type="file" class="form-control" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                                            <div class="invalid-feedback">Veuillez joindre votre CV.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="photo" class="form-label required">Photo d'identité (JPG, PNG)</label>
+                                            <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
+                                            <div class="invalid-feedback">Veuillez joindre votre photo d'identité.</div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="diplome" class="form-label">Copie du dernier diplôme (PDF, JPG, PNG)</label>
+                                            <input type="file" class="form-control" id="diplome" name="diplome" accept=".pdf,image/*">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="autreDocument" class="form-label">Autre document</label>
+                                            <input type="file" class="form-control" id="autreDocument" name="autreDocument">
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p><strong style="color: var(--primary-blue);">Heures d'ouverture :</strong> Lundi - Vendredi : 8h00 - 17h00 | Samedi : 8h00 - 12h00</p>
+
+                                    <!-- Modalités de paiement -->
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h3 class="text-primary mb-4"><i class="fas fa-credit-card me-2"></i>Modalités de paiement</h3>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="modalitePaiement" class="form-label required">Choisissez votre modalité de paiement</label>
+                                            <select class="form-select" id="modalitePaiement" name="modalitePaiement" required>
+                                            <option value="">Sélectionner...</option>
+                                            <option value="comptant">Paiement comptant (-10%)</option>
+                                            <option value="2fois">Paiement en 2 fois</option>
+                                            <option value="3fois">Paiement en 3 fois</option>
+                                        </select>
+                                            <div class="invalid-feedback">Veuillez sélectionner une modalité de paiement.</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Conditions -->
+                                    <div class="row mb-4">
+                                        <div class="col-12">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="acceptConditions" name="acceptConditions" required>
+                                                <label class="form-check-label" for="acceptConditions">
+                                                J'accepte les <a href="#" class="text-primary">conditions générales</a> et le <a href="#" class="text-primary">règlement intérieur</a> *
+                                            </label>
+                                                <div class="invalid-feedback">Vous devez accepter les conditions.</div>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                                <label class="form-check-label" for="newsletter">
+                                                Je souhaite recevoir la newsletter et les informations sur les nouvelles formations
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bouton de soumission -->
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary-custom btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Valider l'inscription
+                                    </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Section Avantages -->
+        <section class="section-padding-iform bg-light">
+            <div class="container">
+                <h2 class="section-title-iform fade-in">Pourquoi choisir PSI ?</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center h-100 fade-in">
+                            <div class="card-body p-4">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h4 class="card-title">Inscription rapide</h4>
+                                <p class="card-text">Processus d'inscription simplifié et confirmation sous 24h. Commencez votre formation rapidement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center h-100 fade-in">
+                            <div class="card-body p-4">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h4 class="card-title">Suivi personnalisé</h4>
+                                <p class="card-text">Accompagnement individuel par nos conseillers pédagogiques tout au long de votre parcours de formation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card text-center h-100 fade-in">
+                            <div class="card-body p-4">
+                                <div class="advantage-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4 class="card-title">Certification reconnue</h4>
+                                <p class="card-text">Diplômes et certificats reconnus par l'État et les entreprises, valorisant votre profil professionnel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Informations pratiques -->
+        <section class="section-padding-iform">
+            <div class="container">
+                <h2 class="section-title-iform fade-in">Informations pratiques</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <div class="card h-100 fade-in">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-primary mb-4">
+                                    <i class="fas fa-list-ol me-2"></i>Processus d'inscription
+                                </h4>
+                                <div class="process-step-iform">
+                                    <div class="process-number">1</div>
+                                    <h5>Remplissage du formulaire</h5>
+                                    <p>Complétez le formulaire d'inscription en ligne avec toutes vos informations personnelles et professionnelles.</p>
+                                </div>
+                                <div class="process-step-iform">
+                                    <div class="process-number">2</div>
+                                    <h5>Envoi des documents</h5>
+                                    <p>Joignez tous les documents requis : CV, photo d'identité, copie du dernier diplôme.</p>
+                                </div>
+                                <div class="process-step-iform">
+                                    <div class="process-number">3</div>
+                                    <h5>Validation du dossier</h5>
+                                    <p>Notre équipe examine votre dossier et vous contacte sous 24h pour confirmation.</p>
+                                </div>
+                                <div class="process-step-iform">
+                                    <div class="process-number">4</div>
+                                    <h5>Début de la formation</h5>
+                                    <p>Une fois votre inscription validée, vous recevez toutes les informations pour commencer votre formation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="card h-100 fade-in">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-primary mb-4">
+                                    <i class="fas fa-folder-open me-2"></i>Documents requis
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>CV actualisé</strong> (Format PDF, DOC ou DOCX)
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Photo d'identité récente</strong> (Format JPG ou PNG)
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        <strong>Copie du dernier diplôme</strong> (Si disponible)
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-info-circle text-info me-2"></i>
+                                        <strong>Pièce d'identité</strong> (À présenter lors de l'entretien)
+                                    </li>
+                                </ul>
+
+                                <h4 class="card-title text-primary mb-4 mt-5">
+                                    <i class="fas fa-credit-card me-2"></i>Modalités de paiement
+                                </h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-money-bill-wave text-success me-2"></i>
+                                        <strong>Paiement comptant :</strong> -10% de réduction
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-calendar-alt text-info me-2"></i>
+                                        <strong>Paiement en 2 fois :</strong> 50% à l'inscription, 50% à mi-parcours
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-calendar-check text-warning me-2"></i>
+                                        <strong>Paiement en 3 fois :</strong> Répartition équitable sur la durée
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-university text-primary me-2"></i>
+                                        <strong>Modes acceptés :</strong> Espèces, Chèque, Virement, Mobile Money
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5><i class="fas fa-building"></i> PRO SERVICE INTERNATIONAL</h5>
-                    <p>Votre partenaire de confiance pour la formation professionnelle et le développement des compétences au Bénin.</p>
-                    <div class="social-links">
-                        <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                <div class="col-lg-4">
+                    <h5>PRO SERVICE INTERNATIONAL</h5>
+                    <p>Votre partenaire de confiance pour les services RH & BTP en Afrique. Excellence, Innovation, Partenariat.</p>
+                    <div class="social-links-footer">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-lg-2">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Recrutement</a></li>
+                        <li><a href="#">Formations</a></li>
+                        <li><a href="#">BTP</a></li>
+                        <li><a href="#">Importation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
                     <h5>Formations</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">BTP & Construction</a></li>
@@ -1008,46 +487,69 @@
                         <li><a href="#">Sécurité</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Conseil en formation</a></li>
-                        <li><a href="#">Certification</a></li>
-                        <li><a href="#">Placement professionnel</a></li>
-                        <li><a href="#">Formation en entreprise</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-3">
                     <h5>Contact</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Formation, Cotonou</p>
-                    <p><i class="fas fa-phone"></i> +229 21 12 34 56</p>
-                    <p><i class="fas fa-envelope"></i> info@psi-benin.com</p>
-                    <p><i class="fas fa-clock"></i> Lun-Ven: 8h-17h, Sam: 8h-12h</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Cotonou, Bénin</p>
+                    <p><i class="fas fa-phone me-2"></i>+229 XX XX XX XX</p>
+                    <p><i class="fas fa-envelope me-2"></i>contact@psibenin.com</p>
                 </div>
             </div>
-            <hr style="border-color: rgba(255,255,255,0.2);">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2025 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="me-3">Mentions légales</a>
-                    <a href="#" class="me-3">Politique de confidentialité</a>
-                    <a href="#">CGV</a>
-                </div>
+            <hr style="border-color: #ffffff33;">
+            <div class="text-center">
+                <p>&copy; 2024 PRO SERVICE INTERNATIONAL. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Buttons -->
-    <div class="floating-buttons">
-        <a href="https://wa.me/22997123456" class="floating-btn whatsapp-btn" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <div class="floating-btn scroll-top-btn" id="scrollTopBtn">
-            <i class="fas fa-arrow-up"></i>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/22912345678" class="whatsapp-btn" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+
+    <!-- Modal de confirmation -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-primary">
+                        <i class="fas fa-check-circle me-2"></i>Confirmation d'inscription
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                    </div>
+                    <h4 class="text-success mb-3">Inscription envoyée avec succès !</h4>
+                    <p class="mb-4">Votre demande d'inscription a été transmise à notre équipe. Vous recevrez une confirmation par email sous 24h.</p>
+                    <p class="text-muted">
+                        <i class="fas fa-info-circle me-2"></i> Un conseiller vous contactera prochainement pour finaliser votre inscription.
+                    </p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-primary-custom" data-bs-dismiss="modal">
+                        <i class="fas fa-home me-2"></i>Retour à l'accueil
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap 5.3.0 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sigin-in-formation.js"></script>
+
+</body>
+
+</html>
